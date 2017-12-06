@@ -19,15 +19,15 @@
   }
 
   &.icon--picture {
-    background: $c-brand-mint-green;
+    background-color: $c-brand-bright-orange;
   }
 
   &.icon--video {
-    background: $c-brand-deep-red;
+    background-color: $c-brand-purple;
   }
 
   &.icon--location {
-    background: $c-brand-bright-yellow;
+    background-color: $c-brand-ruby;
   }
   @include breakpoint($bp-xl) {
     width: 60px;
