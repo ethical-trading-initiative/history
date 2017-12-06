@@ -1,22 +1,16 @@
 .page-header {
-  height: 200px;
-  line-height: 200px;
   text-align: center;
   background-color: $c-grey-d2;
+  padding: $space--large;
   display: flex;
   flex-direction: column;
   justify-content: center;
   h1 {
     flex: 0 1 auto;
     color: white;
-    line-height: 0;
     margin: 0;
     @include breakpoint($bp-med) {
       margin: 0;
     }
-  }
-  @include breakpoint($bp-xl) {
-    height: 300px;
-    line-height: 300px;
   }
 }
