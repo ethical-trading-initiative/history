@@ -1,0 +1,21 @@
+.timeline-entry {
+  @include clearfix;
+  position: relative;
+  margin: 2em 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($bp-xl) {
+    margin: 4em 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
