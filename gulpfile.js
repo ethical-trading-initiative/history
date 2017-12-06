@@ -55,7 +55,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('nunjucks', function() {
-  gulp.src('src/templates/**/*.+(html|nunjucks)')
+  gulp.src('src/pages/**/*.+(html|nunjucks|njk)')
   .pipe(nunjucksRender({
       path: ['src/templates']
     }))
