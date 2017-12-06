@@ -18,6 +18,7 @@
     "gulp-imagemin": "^3.0.3",
     "gulp-main-bower-files": "^1.5.3",
     "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-nunjucks-render": "^2.2.1",
     "gulp-postcss": "^6.2.0",
     "gulp-real-favicon": "^0.2.2",
     "gulp-replace": "^0.5.4",

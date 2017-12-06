@@ -7,6 +7,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var modernizr = require('gulp-modernizr');
+var nunjucksRender = require('gulp-nunjucks-render');
 var postcss = require('gulp-postcss');
 var realFavicon = require ('gulp-real-favicon');
 var replace = require('gulp-replace');
@@ -36,7 +37,7 @@ gulp.task('build', [
   // 'svg-sprite',
   'sass:prod',
   'js:prod',
-  'html',
+  'nunjucks',
   'modernizr'
 ]);
 
@@ -50,14 +51,15 @@ gulp.task('init', [
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.scss', ['sass:dev']);
   gulp.watch('./src/js/**/*.js', ['js:dev']);
-  gulp.watch('./src/**/*.html', ['html']);
+  gulp.watch('./src/**/*.html', ['nunjucks']);
 });
 
-gulp.task('html', function() {
-  // Copy src HTML files to dist.
-  gulp.src('./src/**/*.html')
-    .pipe(gulp.dest('./dist'))
-    .pipe(connect.reload());
+gulp.task('nunjucks', function() {
+  gulp.src('src/templates/**/*.+(html|nunjucks)')
+  .pipe(nunjucksRender({
+      path: ['src/templates']
+    }))
+  .pipe(gulp.dest('dist'))
 });
 
 gulp.task('sass:prod', function () {
