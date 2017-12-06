@@ -22,7 +22,6 @@ var FAVICON_DATA_FILE = 'dist/favicons/faviconData.json';
 var postcssProcessors = [
   require('postcss-will-change')(), // must be before autoprefixer
   require('autoprefixer')({browsers: ['last 2 versions', 'Firefox ESR']}),
-  require('postcss-pseudoelements')(),
   require('postcss-vmin')(),
   require('pixrem')()
 ];
