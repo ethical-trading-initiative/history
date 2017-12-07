@@ -10,58 +10,16 @@
 
 <div class="timeline">
 
+  {% for entry in entries %}
   {{ timeline.entry(
-    "picture",
-    "Jan 14",
-    "Title of section 1",
-    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-    "https://www.ethicaltrade.org"
+    entry[0],
+    entry[1],
+    entry[2],
+    entry[3],
+    entry[4]
     )
   }}
-
-  {{ timeline.entry(
-    "video",
-    "Jan 18",
-    "Title of section 2",
-    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>"
-    )
-  }}
-
-  {{ timeline.entry(
-    "location",
-    "Jan 24",
-    "Title of section 3",
-    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p>
-    <p>Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
-    "https://www.ethicaltrade.org"
-    )
-  }}
-
-  {{ timeline.entry(
-    "picture",
-    "Feb 14",
-    "Title of section 4",
-    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-    "https://www.ethicaltrade.org"
-    )
-  }}
-
-  {{ timeline.entry(
-    "location",
-    "Feb 18",
-    "Title of section 5",
-    "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>",
-    "https://www.ethicaltrade.org"
-    )
-  }}
-
-  {{ timeline.entry(
-    "video",
-    "Feb 26",
-    "Final entry",
-    "<p>This is the content of the last entry.</p>"
-    )
-  }}
+  {% endfor %}
 
 </div>
 

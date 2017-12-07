@@ -1,6 +1,7 @@
 'use strict';
 
 var connect = require('gulp-connect');
+var data = require('gulp-data');
 var filter = require('gulp-filter');
 var flatten = require('gulp-flatten');
 var fs = require('fs');
@@ -56,11 +57,14 @@ gulp.task('watch', function () {
 
 gulp.task('nunjucks', function() {
   gulp.src('src/pages/**/*.+(html|nunjucks|njk)')
-  .pipe(nunjucksRender({
-      path: ['src/templates']
-    }))
-  .pipe(gulp.dest('dist'))
-  .pipe(connect.reload());
+    .pipe(data(function() {
+        return require('./src/data.json')
+      }))
+    .pipe(nunjucksRender({
+        path: ['src/templates']
+      }))
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload());
 });
 
 gulp.task('sass:prod', function () {
