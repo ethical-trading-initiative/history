@@ -51,7 +51,7 @@ gulp.task('init', [
 gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.scss', ['sass:dev']);
   gulp.watch('./src/js/**/*.js', ['js:dev']);
-  gulp.watch('./src/**/*.html', ['nunjucks']);
+  gulp.watch('./src/**/*.+(html|nunjucks|njk)', ['nunjucks']);
 });
 
 gulp.task('nunjucks', function() {
@@ -60,6 +60,7 @@ gulp.task('nunjucks', function() {
       path: ['src/templates']
     }))
   .pipe(gulp.dest('dist'))
+  .pipe(connect.reload());
 });
 
 gulp.task('sass:prod', function () {
