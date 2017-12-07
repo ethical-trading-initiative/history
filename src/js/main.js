@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
 	var timelineBlocks = $('.timeline-entry');
-	var offset = 0.8;
+  // TODO: offset seems very sensitive to content (header height?)
+	var offset = 0.9; // was 0.8
 
 	//hide timeline blocks which are outside the viewport
 	hideBlocks(timelineBlocks, offset);
