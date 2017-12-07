@@ -1,5 +1,8 @@
 jQuery(document).ready(function($){
 
+  // Timeline
+  // ---------------------------------------------------------------------------
+
 	var timelineEntries = $('.timeline-entry');
   // TODO: offset seems very sensitive to content (header height?)
 	var offset = 0.9; // was 0.8
@@ -25,5 +28,13 @@ jQuery(document).ready(function($){
 			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-entry-icon').hasClass('is-hidden') ) && $(this).find('.timeline-entry-icon, .timeline-entry-content').removeClass('is-hidden').addClass('bounce-in');
 		});
 	}
+
+  // Image & video galleries
+  // ---------------------------------------------------------------------------
+
+  $("[data-fancybox]").fancybox({
+	   loop : true,
+     buttons : ['close']
+  });
 
 });

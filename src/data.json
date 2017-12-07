@@ -4,7 +4,7 @@
       "type": "picture",
       "date": "Jan 14",
       "title": "Title of section 1",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
+      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p><ul><li><a data-fancybox='gallery' href='https://www.thesun.co.uk/wp-content/uploads/2016/04/2601544.main_image.jpg'>Image</a></li><li><a data-fancybox='gallery' href='https://www.youtube.com/watch?v=_sI_Ps7JSEk'>YouTube</a></li></ul>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {

@@ -269,6 +269,11 @@ gulp.task('check-for-favicon-update', function(done) {
 // Copy other package files to dist whose source needs to be targeted
 // specifically.
 gulp.task('copyOtherFilesToDist', function() {
+
   gulp.src('./node_modules/@ethical-trading-initiative/base-sass/dist/css/reset.css')
     .pipe(gulp.dest('./dist/vendor/@ethical-trading-initiative/base-sass'));
+
+  gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
+    .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
+
 });

@@ -33,5 +33,7 @@
     "postcss-will-change": "^1.1.0",
     "susy": "^2.2.12"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.2.5"
+  }
 }
