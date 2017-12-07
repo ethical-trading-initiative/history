@@ -1,0 +1,20 @@
+{% macro entry(type, date, title, body, btn_url, btn_label='Read more') -%}
+
+  <div class="timeline-entry">
+
+    <div class="timeline-entry-icon icon--{{ type | lower }}">
+      <img src="images/icon-{{ type | lower }}.svg" alt="{{ type | capitalize }}">
+    </div>
+
+    <div class="timeline-entry-content">
+      <h2>{{ title }}</h2>
+      {{ body | safe }}
+      {% if btn_url %}
+      <a href="{{ btn_url }}" target="_blank" class="btn read-more">{{ btn_label }}</a>
+      {% endif %}
+      <span class="entry-date">{{ date }}</span>
+    </div>
+
+  </div>
+
+{%- endmacro %}
