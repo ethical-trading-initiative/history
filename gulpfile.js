@@ -37,7 +37,7 @@ gulp.task('build', [
   'imagemin',
   'gallery-images',
   // 'imagemin:sprite',
-  // 'svg-sprite',
+  'svg-sprite',
   'sass:prod',
   'js:prod',
   'nunjucks',
@@ -101,14 +101,29 @@ gulp.task('connect', function() {
 });
 
 gulp.task('imagemin', function () {
-  // gulp.src(['src/images/**/*', '!src/images/sprite/**/*.svg'])
-  // Grab SVGs only for now.
-  gulp.src(['src/images/**/*.svg'])
+  // Exclude certain directories that are handled specifically in other Gulp tasks.
+  gulp.src(['src/images/**/*', '!src/images/sprite', '!src/images/sprite/**/*', '!src/images/bitmap/gallery-items/**/*'])
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('imagemin:sprite', function () {
+// gulp.task('imagemin:sprite', function () {
+//   gulp.src('src/images/sprite/**/*.svg')
+//     .pipe(imagemin([
+//       imagemin.svgo({plugins: [
+//         { removeViewBox: false }, {
+//           removeAttrs: {
+//             attrs: ['(stroke|fill)']
+//           }
+//         }
+//       ]})
+//     ]))
+//     .pipe(gulp.dest('dist/images/sprite'));
+// });
+
+// Try SVGO settings in the browser:
+// https://jakearchibald.github.io/svgomg
+gulp.task('svg-sprite', function() {
   gulp.src('src/images/sprite/**/*.svg')
     .pipe(imagemin([
       imagemin.svgo({plugins: [
@@ -119,13 +134,6 @@ gulp.task('imagemin:sprite', function () {
         }
       ]})
     ]))
-    .pipe(gulp.dest('dist/images/sprite'));
-});
-
-// Try SVGO settings in the browser:
-// https://jakearchibald.github.io/svgomg
-gulp.task('svg-sprite', function() {
-  gulp.src('dist/images/sprite/**/*.svg')
     .pipe(svgSprite({
       mode: {
         symbol: true
