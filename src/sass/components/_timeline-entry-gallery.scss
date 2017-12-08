@@ -21,4 +21,13 @@
       }
     }
   }
+  .icon {
+    @include size(60%);
+    fill: rgba(white, 0.7);
+    position: absolute;
+    // Vertical & horizontal center.
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

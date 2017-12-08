@@ -1,3 +1,5 @@
+{% import "macros/sprite.njk" as sprite %}
+
 {% macro gallery_item( label='', gallery_uid='', img_id='', video_url='' ) -%}
 
 {% if video_url %}
@@ -7,6 +9,9 @@
 {% endif %}
 
 <a data-fancybox="gallery-{{ uid }}" href="{{ dest }}">
+  {% if video_url %}
+  {{ sprite.use('play-circle') }}
+  {% endif %}
   <img src="images/bitmap/gallery-items/{{ img_id }}-thumb.jpeg" alt="{{ label }}" />
 </a>
 
