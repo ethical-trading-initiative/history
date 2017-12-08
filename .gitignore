@@ -1,2 +1,4 @@
 /dist
+# TODO: Keeping bitmap images out of version control for now.
+/images/bitmap/gallery-items/*
 /node_modules
