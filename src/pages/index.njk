@@ -12,11 +12,13 @@
 
   {% for entry in entries %}
   {{ timeline.entry(
-    entry.type,
-    entry.date,
-    entry.title,
-    entry.body,
-    entry.btn_url
+    uid     = loop.index0,
+    type    = entry.type,
+    date    = entry.date,
+    title   = entry.title,
+    body    = entry.body,
+    btn_url = entry.btn_url,
+    gallery = entry.gallery
     )
   }}
   {% endfor %}

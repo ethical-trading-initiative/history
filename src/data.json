@@ -3,35 +3,55 @@
     {
       "type": "picture",
       "date": "Jan 14",
-      "title": "Title of section 1",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p><ul><li><a data-fancybox='gallery' href='https://www.thesun.co.uk/wp-content/uploads/2016/04/2601544.main_image.jpg'>Image</a></li><li><a data-fancybox='gallery' href='https://www.youtube.com/watch?v=_sI_Ps7JSEk'>YouTube</a></li></ul>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "title": "Title of entry 1",
+      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
+      "btn_url": "https://www.ethicaltrade.org",
+      "gallery": [
+        {
+          "label": "Gallery image",
+          "href": "http://www.abc.net.au/news/image/924484-3x2-940x627.jpg"
+        },
+        {
+          "label": "Gallery video",
+          "href": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
+        }
+      ]
     },
     {
       "type": "video",
       "date": "Jan 18",
-      "title": "Title of section 2",
+      "title": "Title of entry 2",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "btn_url": "https://www.ethicaltrade.org",
+      "gallery": [
+        {
+          "label": "Gallery image",
+          "href": "https://www.thesun.co.uk/wp-content/uploads/2016/04/2601544.main_image.jpg"
+        },
+        {
+          "label": "Gallery video",
+          "href": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
+        }
+      ]
     },
     {
       "type": "location",
       "date": "Jan 24",
-      "title": "Title of section 3",
+      "title": "Title of entry 3",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
       "type": "picture",
       "date": "Feb 14",
-      "title": "Title of section 4",
+      "title": "Title of entry 4",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
       "type": "location",
       "date": "Feb 18",
-      "title": "Title of section 5",
+      "title": "Title of entry 5",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
     },
     {

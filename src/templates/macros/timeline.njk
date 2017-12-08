@@ -1,4 +1,4 @@
-{% macro entry(type, date, title, body, btn_url, btn_label='Read more') -%}
+{% macro entry( uid='', type='text', date='', title='', body='', btn_url='', gallery={} ) -%}
 
   <div class="timeline-entry">
 
@@ -9,8 +9,17 @@
     <div class="timeline-entry-content">
       <h2>{{ title }}</h2>
       {{ body | safe }}
+      {% if gallery %}
+      <ul>
+        {% for item in gallery %}
+        <li>
+          <a data-fancybox='gallery-{{ uid }}' href='{{ item.href }}'>{{ item.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       {% if btn_url %}
-      <a href="{{ btn_url }}" target="_blank" class="btn read-more">{{ btn_label }}</a>
+      <a href="{{ btn_url }}" target="_blank" class="btn read-more">Read more</a>
       {% endif %}
       <span class="entry-date">{{ date }}</span>
     </div>
