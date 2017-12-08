@@ -5,6 +5,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: $c-brand-bright-orange;
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
 
   img {
@@ -18,17 +19,6 @@
     margin-top: -12px;
   }
 
-  &.icon--picture {
-    background-color: $c-brand-bright-orange;
-  }
-
-  &.icon--video {
-    background-color: $c-brand-purple;
-  }
-
-  &.icon--location {
-    background-color: $c-brand-ruby;
-  }
   @include breakpoint($bp-xl) {
     width: 60px;
     height: 60px;

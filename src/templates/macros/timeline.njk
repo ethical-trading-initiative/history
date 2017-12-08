@@ -1,12 +1,10 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', type='text', date='', title='', body='', btn_url='', media={} ) -%}
+{% macro entry( uid='', date='', title='', body='', btn_url='', media={} ) -%}
 
   <div class="timeline-entry">
 
-    <div class="timeline-entry-icon icon--{{ type | lower }}">
-      <img src="images/icon-{{ type | lower }}.svg" alt="{{ type | capitalize }}">
-    </div>
+    <div class="timeline-entry-icon icon--{{ type | lower }}"></div>
 
     <div class="timeline-entry-content">
       <h2>{{ title }}</h2>
