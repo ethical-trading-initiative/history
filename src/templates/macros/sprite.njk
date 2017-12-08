@@ -1,0 +1,7 @@
+{% macro use(sprite_id, svg_class='icon', svg_attributes='aria-hidden="true"') -%}
+
+<svg class="{{ svg_class }}" {{ svg_attributes }}>
+  <use xlink:href="sprites/symbol/svg/sprite.symbol.svg#{{ sprite_id }}" />
+</svg>
+
+{%- endmacro %}
