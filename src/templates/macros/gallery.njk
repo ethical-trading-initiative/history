@@ -1,0 +1,13 @@
+{% macro gallery_item( label='', gallery_uid='', img_id='', video_url='' ) -%}
+
+{% if video_url %}
+  {% set dest = video_url %}
+{% else %}
+  {% set dest = "images/bitmap/gallery-items/" + img_id + ".jpeg" %}
+{% endif %}
+
+<a data-fancybox="gallery-{{ uid }}" href="{{ dest }}">
+  <img src="images/bitmap/gallery-items/{{ img_id }}-thumb.jpeg" alt="{{ label }}" />
+</a>
+
+{%- endmacro %}

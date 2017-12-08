@@ -6,14 +6,19 @@
       "title": "Title of entry 1",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
       "btn_url": "https://www.ethicaltrade.org",
-      "gallery": [
+      "media": [
         {
-          "label": "Gallery image",
-          "href": "http://www.abc.net.au/news/image/924484-3x2-940x627.jpg"
+          "label": "Gallery image 1",
+          "img_id": "mountains"
+        },
+        {
+          "label": "Gallery image 2",
+          "img_id": "pineapples"
         },
         {
           "label": "Gallery video",
-          "href": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
+          "img_id": "chicken",
+          "video_url": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
         }
       ]
     },
@@ -23,14 +28,15 @@
       "title": "Title of entry 2",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
       "btn_url": "https://www.ethicaltrade.org",
-      "gallery": [
+      "media": [
         {
           "label": "Gallery image",
-          "href": "https://www.thesun.co.uk/wp-content/uploads/2016/04/2601544.main_image.jpg"
+          "img_id": "pineapples"
         },
         {
           "label": "Gallery video",
-          "href": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
+          "img_id": "beach",
+          "video_url": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
         }
       ]
     },

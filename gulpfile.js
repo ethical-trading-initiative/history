@@ -12,6 +12,7 @@ var nunjucksRender = require('gulp-nunjucks-render');
 var postcss = require('gulp-postcss');
 var realFavicon = require ('gulp-real-favicon');
 var replace = require('gulp-replace');
+var responsive = require('gulp-responsive');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
@@ -34,6 +35,7 @@ gulp.task('default', ['watch', 'connect']);
 
 gulp.task('build', [
   'imagemin',
+  'gallery-images',
   // 'imagemin:sprite',
   // 'svg-sprite',
   'sass:prod',
@@ -100,8 +102,8 @@ gulp.task('connect', function() {
 
 gulp.task('imagemin', function () {
   // gulp.src(['src/images/**/*', '!src/images/sprite/**/*.svg'])
-  // Grab everything for now :)
-  gulp.src(['src/images/**/*'])
+  // Grab SVGs only for now.
+  gulp.src(['src/images/**/*.svg'])
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'));
 });
@@ -279,4 +281,28 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
     .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
 
+});
+
+gulp.task('gallery-images', function () {
+  return gulp.src('src/images/bitmap/gallery-items/**/*.{jpg,jpeg}')
+    .pipe(responsive({
+      '*': [
+        {
+          // Thumbnail images.
+          rename: { suffix: '-thumb' },
+          height: 60,
+          quality: 85
+        },{
+          // Large, higher quality images.
+          quality: 100
+        }
+      ]}, {
+      // Global configuration for all images
+      format: 'jpeg',
+      progressive: true,
+      withMetadata: false,
+      withoutEnlargement: false
+    }))
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images/bitmap/gallery-items'));
 });

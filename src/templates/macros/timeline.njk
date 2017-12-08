@@ -1,4 +1,6 @@
-{% macro entry( uid='', type='text', date='', title='', body='', btn_url='', gallery={} ) -%}
+{% import "macros/gallery.njk" as gallery %}
+
+{% macro entry( uid='', type='text', date='', title='', body='', btn_url='', media={} ) -%}
 
   <div class="timeline-entry">
 
@@ -9,11 +11,17 @@
     <div class="timeline-entry-content">
       <h2>{{ title }}</h2>
       {{ body | safe }}
-      {% if gallery %}
-      <ul>
-        {% for item in gallery %}
-        <li>
-          <a data-fancybox='gallery-{{ uid }}' href='{{ item.href }}'>{{ item.label }}</a>
+      {% if media %}
+      <ul class="timeline-entry-gallery">
+        {% for item in media %}
+        <li class="gallery-item">
+          {{ gallery.gallery_item(
+            label       = item.label,
+            gallery_uid = uid,
+            img_id      = item.img_id,
+            video_url   = item.video_url
+            )
+          }}
         </li>
         {% endfor %}
       </ul>
