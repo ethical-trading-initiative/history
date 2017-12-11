@@ -1,7 +1,8 @@
 {
   "entries": [
     {
-      "date": "Jan 14",
+      "year": "2016",
+      "month": "Jan",
       "title": "Title of entry 1",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
       "btn_url": "https://www.ethicaltrade.org",
@@ -22,7 +23,8 @@
       ]
     },
     {
-      "date": "Jan 18",
+      "year": "2016",
+      "month": "Feb",
       "title": "Title of entry 2",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
       "btn_url": "https://www.ethicaltrade.org",
@@ -39,24 +41,28 @@
       ]
     },
     {
-      "date": "Jan 24",
+      "year": "2016",
+      "month": "Oct",
       "title": "Title of entry 3",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
-      "date": "Feb 14",
+      "year": "2017",
+      "month": "Jan",
       "title": "Title of entry 4",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
-      "date": "Feb 18",
+      "year": "2017",
+      "month": "Mar",
       "title": "Title of entry 5",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
     },
     {
-      "date": "Feb 26",
+      "year": "2017",
+      "month": "Aug",
       "title": "Final entry",
       "body": "<p>This is the body of the last entry.</p>"
     }

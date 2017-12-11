@@ -13,7 +13,8 @@
   {% for entry in entries %}
   {{ timeline.entry(
     uid     = loop.index0,
-    date    = entry.date,
+    year    = entry.year,
+    month   = entry.month,
     title   = entry.title,
     body    = entry.body,
     btn_url = entry.btn_url,

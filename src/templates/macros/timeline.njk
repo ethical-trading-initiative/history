@@ -1,10 +1,10 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', date='', title='', body='', btn_url='', media={} ) -%}
+{% macro entry( uid='', year='', month='', title='', body='', btn_url='', media={} ) -%}
 
   <div class="timeline-entry">
 
-    <div class="timeline-entry-icon icon--{{ type | lower }}"></div>
+    <div class="timeline-entry-icon">{{ year }} {{ month }}</div>
 
     <div class="timeline-entry-content">
       <h2>{{ title }}</h2>
@@ -27,7 +27,7 @@
       {% if btn_url %}
       <a href="{{ btn_url }}" target="_blank" class="btn read-more">Read more</a>
       {% endif %}
-      <span class="entry-date">{{ date }}</span>
+      <span class="entry-date">{{ year }} {{ month }}</span>
     </div>
 
   </div>

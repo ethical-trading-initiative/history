@@ -4,20 +4,12 @@
   left: 0;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  // border-radius: 50%;
   background-color: $c-brand-bright-orange;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
-
-  img {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
-  }
+  // box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
+  text-align: center;
+  padding: 3px;
+  color: white;
 
   @include breakpoint($bp-xl) {
     width: 60px;
