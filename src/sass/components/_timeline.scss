@@ -3,9 +3,9 @@
   @include clearfix;
 
   // This class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width.
-  width: 90%;
+  // width: 90%;
   max-width: $bp-xl;
-  margin: 0 auto;
+  margin: 0 30px;
 
   position: relative;
   padding: 2em 0;
@@ -23,6 +23,7 @@
   }
 
   @include breakpoint($bp-xl) {
+    margin: 0 auto;
     &::before {
       left: 50%;
       margin-left: -2px;
