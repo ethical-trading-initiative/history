@@ -10,12 +10,12 @@
   &::before {
     content: '';
     position: absolute;
-    top: 16px;
-    right: 100%;
+    top: 20px;
+    left: -20px;
+    display: block;
+    width: 20px;
     height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-right-color: $bg-color;
+    border-top: 5px dotted white;
   }
 
   h2 {
@@ -33,24 +33,24 @@
   @include breakpoint($bp-xl) {
     margin-left: 0;
     padding: 1.6em;
-    width: 45%;
+    // Half the available space,
+    // minus half the date marker width,
+    // minus a gap.
+    width: calc(50% - 30px - 30px);
 
     &::before {
-      top: 24px;
-      left: 100%;
-      border-color: transparent;
-      border-left-color: $bg-color;
+      top: 30px;
+      left: auto;
+      right: -30px;
+      width: 30px;
     }
 
     .timeline-entry:nth-child(even) & {
       float: right;
 
       &::before {
-        top: 24px;
-        left: auto;
-        right: 100%;
-        border-color: transparent;
-        border-right-color: $bg-color;
+        right: auto;
+        left: -30px;
       }
     }
 
