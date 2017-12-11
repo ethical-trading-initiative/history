@@ -2,7 +2,7 @@
   @include clearfix;
   position: relative;
   margin-left: 60px;
-  background: white;
+  background-color: white;
   padding: 1em;
   box-shadow: 0 3px 0 darken($c-body-bg, 5%);
 
@@ -14,7 +14,7 @@
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid white;
+    border-right-color: white;
   }
 
   h2 {

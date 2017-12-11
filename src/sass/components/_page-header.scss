@@ -1,6 +1,6 @@
 .page-header {
   text-align: center;
-  background-color: $c-grey-d2;
+  background-color: $c-brand-blue-teal;
   padding: $space--large;
   display: flex;
   flex-direction: column;
@@ -9,8 +9,12 @@
     flex: 0 1 auto;
     color: white;
     margin: 0;
-    @include breakpoint($bp-med) {
-      margin: 0;
-    }
+  }
+
+  @include breakpoint($bp-med) {
+    @include padding($space--large*2 null);
+     h1 {
+       margin: 0;
+     }
   }
 }
