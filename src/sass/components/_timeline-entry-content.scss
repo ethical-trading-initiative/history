@@ -1,8 +1,9 @@
 .timeline-entry-content {
+  $bg-color: white;
   @include clearfix;
   position: relative;
   margin-left: 60px;
-  background-color: white;
+  background-color: $bg-color;
   padding: 1em;
   box-shadow: $box-shadow--default;
 
@@ -14,7 +15,7 @@
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right-color: white;
+    border-right-color: $bg-color;
   }
 
   h2 {
@@ -38,7 +39,7 @@
       top: 24px;
       left: 100%;
       border-color: transparent;
-      border-left-color: white;
+      border-left-color: $bg-color;
     }
 
     .timeline-entry:nth-child(even) & {
@@ -49,7 +50,7 @@
         left: auto;
         right: 100%;
         border-color: transparent;
-        border-right-color: white;
+        border-right-color: $bg-color;
       }
     }
 

@@ -1,10 +1,26 @@
 .page-header {
+  $bg-color: $c-grey-d1;
   text-align: center;
-  background-color: $c-brand-blue-teal;
+  background-color: $bg-color;
   padding: $space--large;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: calc(50% - 15px);
+    margin-bottom: -30px;
+    z-index: 10;
+    height: 0;
+    width: 0;
+    border: 15px solid transparent;
+    border-top-color: $bg-color;
+    // border-top-color: yellow; // debug
+  }
+
   h1 {
     flex: 0 1 auto;
     color: white;

@@ -3,47 +3,31 @@
   background: black url(../images/bitmap/gallery-items/chicken.jpeg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  // Prevents this element from noticeably resizing as entries animate in.
   overflow-y: hidden;
 }
 
 .overlay-shim {
-  $stripe-height: 1000px;
+  // Vars used in diagonal stripes.
+  $stripe-height: 1500px;
+  $offset: 200px; // Accounts for header. By eye for now.
   $stripe-color-1: rgba($c-brand-blue-teal, 0.5);
   $stripe-color-2: rgba($c-brand-dusty-pink, 0.5);
-  position: absolute;
-  width: 100%;
-  // TODO: This height will need to be tweaked accordingly content height.
-  // Adjust with JS? Re-adjust on viewport width change?
-  height: 200vh;
+
+  // Diagonal stripes
+  // TODO: Adjust stripe height at different breakpoints.
   background-image: repeating-linear-gradient(
       -5deg,
-      $stripe-color-1 0,
-      $stripe-color-1 $stripe-height,
-      $stripe-color-2 $stripe-height,
-      $stripe-color-2 $stripe-height*2
+      $stripe-color-1 $offset,
+      $stripe-color-1 $stripe-height+$offset,
+      $stripe-color-2 $stripe-height+$offset,
+      $stripe-color-2 ($stripe-height*2)+$offset
   );
 
-  // $height: 50vh;
-  // width: 100%;
-  // height: $height;
-  // margin-bottom: $height;
-  // &:after {
-  //   position: absolute;
-  //   content: "";
-  //   width: 100%;
-  //   height: $height;
-  //   margin-top: $height;
-  // }
-  // &:nth-child(odd) {
-  //   background-color: rgba($c-brand-blue-teal, 0.5);
-  //   &:after {
-  //     background-color: rgba($c-brand-pale-yellow, 0.5);
-  //   }
-  // }
-  // &:nth-child(even) {
-  //   background-color: rgba($c-brand-dusty-pink, 0.5);
-  //   &:after {
-  //     background-color: rgba($c-brand-pale-green, 0.5);
-  //   }
-  // }
+  // Fill width & height of entry content.
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

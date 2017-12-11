@@ -4,26 +4,30 @@
 
 {% block content %}
 
-<header class="page-header">
-  <h1>Ethical Trading Initiative - 20 years</h1>
-</header>
-<div class="page-content">
+<div class="parallax-container">
 
-  <div class="overlay-shim"></div>
+  <header class="page-header">
+    <h1>Ethical Trading Initiative - 20 years</h1>
+  </header>
+  <div class="page-content">
 
-  <div class="timeline">
-    {% for entry in entries %}
-    {{ timeline.entry(
-      uid     = loop.index0,
-      year    = entry.year,
-      month   = entry.month,
-      title   = entry.title,
-      body    = entry.body,
-      btn_url = entry.btn_url,
-      media   = entry.media
-      )
-    }}
-    {% endfor %}
+    <div class="overlay-shim"></div>
+
+    <div class="timeline">
+      {% for entry in entries %}
+      {{ timeline.entry(
+        uid     = loop.index0,
+        year    = entry.year,
+        month   = entry.month,
+        title   = entry.title,
+        body    = entry.body,
+        btn_url = entry.btn_url,
+        media   = entry.media
+        )
+      }}
+      {% endfor %}
+    </div>
+
   </div>
 
 </div>
