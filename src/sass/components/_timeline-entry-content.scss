@@ -3,7 +3,7 @@
   position: relative;
   margin-left: 60px;
   background: white;
-  border-radius: $default-border-radius;
+  // border-radius: $default-border-radius;
   padding: 1em;
   box-shadow: 0 3px 0 darken($c-body-bg, 5%);
 
@@ -30,14 +30,6 @@
     float: right;
   }
 
-  .entry-date {
-    font-family: $f-secondary;
-    display: inline-block;
-    float: left;
-    padding: 0.6em 0 0;
-    opacity: 0.7;
-  }
-
   @include breakpoint($bp-xl) {
     margin-left: 0;
     padding: 1.6em;
@@ -50,14 +42,6 @@
       border-left-color: white;
     }
 
-    .entry-date {
-      position: absolute;
-      width: 100%;
-      left: 122%;
-      top: 6px;
-      // padding: 0;
-    }
-
     .timeline-entry:nth-child(even) & {
       float: right;
 
@@ -67,12 +51,6 @@
         right: 100%;
         border-color: transparent;
         border-right-color: white;
-      }
-
-      .entry-date {
-        left: auto;
-        right: 122%;
-        text-align: right;
       }
     }
 
