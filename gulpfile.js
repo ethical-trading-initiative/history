@@ -303,7 +303,7 @@ gulp.task('gallery-images', function () {
         },{
           // Large, higher quality images.
           quality: 100,
-          width: 1200
+          width: 1000
         }
       ]}, {
       // Global configuration for all images
