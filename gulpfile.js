@@ -289,6 +289,9 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
     .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
 
+  gulp.src('./src/robots.txt')
+    .pipe(gulp.dest('./dist'));
+
 });
 
 gulp.task('gallery-images', function () {
