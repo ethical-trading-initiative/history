@@ -302,7 +302,8 @@ gulp.task('gallery-images', function () {
           quality: 85
         },{
           // Large, higher quality images.
-          quality: 100
+          quality: 100,
+          width: 1200
         }
       ]}, {
       // Global configuration for all images
