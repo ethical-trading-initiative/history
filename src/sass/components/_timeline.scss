@@ -2,9 +2,9 @@
 
   @include clearfix;
 
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  // This class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width.
   width: 90%;
-  max-width: $bp-xl; // breakpoints inside partials > _layout.scss
+  max-width: $bp-xl;
   margin: 0 auto;
 
   position: relative;
@@ -12,14 +12,14 @@
 
 
   &::before {
-    /* this is the vertical line */
+    // This is the vertical line.
     content: '';
     position: absolute;
     top: 0;
     left: 18px;
     height: 100%;
     width: 4px;
-    background: darken($c-body-bg, 5%);
+    background-color: white;
   }
 
   @include breakpoint($bp-xl) {
