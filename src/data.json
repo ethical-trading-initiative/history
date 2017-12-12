@@ -1,7 +1,11 @@
 {
   "entries": [
     {
-      "year": "2016",
+      "type": "year",
+      "year": "2014"
+    },
+    {
+      "year": "2014",
       "month": "Jan",
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
@@ -23,7 +27,7 @@
       ]
     },
     {
-      "year": "2016",
+      "year": "2014",
       "month": "Feb",
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
@@ -41,30 +45,38 @@
       ]
     },
     {
-      "year": "2016",
+      "year": "2014",
       "month": "Oct",
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
-      "year": "2017",
+      "type": "year",
+      "year": "2015"
+    },
+    {
+      "year": "2015",
       "month": "Jan",
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
-      "year": "2017",
+      "year": "2015",
       "month": "Mar",
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
     },
     {
-      "year": "2017",
+      "year": "2015",
       "month": "Aug",
       "title": "Entry title",
       "body": "<p>This is the body of the last entry.</p>"
+    },
+    {
+      "type": "year",
+      "year": "2016"
     },
     {
       "year": "2016",
@@ -114,136 +126,8 @@
       "btn_url": "https://www.ethicaltrade.org"
     },
     {
-      "year": "2017",
-      "month": "Jan",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
-    },
-    {
-      "year": "2017",
-      "month": "Mar",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
-    },
-    {
-      "year": "2017",
-      "month": "Aug",
-      "title": "Entry title",
-      "body": "<p>This is the body of the last entry.</p>"
-    },
-    {
-      "year": "2016",
-      "month": "Jan",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image 1",
-          "img_id": "mountains"
-        },
-        {
-          "label": "Gallery image 2",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "chicken",
-          "video_url": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
-    },
-    {
-      "year": "2016",
-      "month": "Feb",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "beach",
-          "video_url": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
-    },
-    {
-      "year": "2016",
-      "month": "Oct",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
-    },
-    {
-      "year": "2017",
-      "month": "Jan",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
-    },
-    {
-      "year": "2017",
-      "month": "Mar",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
-    },
-    {
-      "year": "2017",
-      "month": "Aug",
-      "title": "Entry title",
-      "body": "<p>This is the body of the last entry.</p>"
-    },
-    {
-      "year": "2016",
-      "month": "Jan",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image 1",
-          "img_id": "mountains"
-        },
-        {
-          "label": "Gallery image 2",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "chicken",
-          "video_url": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
-    },
-    {
-      "year": "2016",
-      "month": "Feb",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "beach",
-          "video_url": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
-    },
-    {
-      "year": "2016",
-      "month": "Oct",
-      "title": "Entry title",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "type": "year",
+      "year": "2017"
     },
     {
       "year": "2017",

@@ -4,26 +4,45 @@
 
   // This class is used to give a max-width to the element it is applied to,
   // and center it horizontally when it reaches that max-width.
-  max-width: $bp-xl;
-  margin: 0 30px;
+  // max-width: $bp-xl;
+  // margin: 0 30px;
 
   position: relative;
-  padding: 2em 0;
+  padding: 0 0 2em 0;
 
+  // // was overlay-shim
+  // // Vars used in diagonal stripes.
+  // $stripe-height: 1500px;
+  // $offset: 200px; // Accounts for header. By eye for now.
+  // $stripe-color-1: rgba($c-brand-blue-teal, 0.7);
+  // $stripe-color-2: rgba($c-brand-dusty-pink, 0.7);
+  //
+  // // Diagonal stripes
+  // // TODO: Adjust stripe height at different breakpoints.
+  // // TODO: Adjust alpha values at different breakpoints.
+  // background-image: repeating-linear-gradient(
+  //     -5deg,
+  //     $stripe-color-1 $offset,
+  //     $stripe-color-1 $stripe-height+$offset,
+  //     $stripe-color-2 $stripe-height+$offset,
+  //     $stripe-color-2 ($stripe-height*2)+$offset
+  // );
+  // //
 
   &::before {
     // This is the vertical line.
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 34px;
     height: 100%;
     width: 4px;
     background-color: white;
+    z-index: 5;
   }
 
   @include breakpoint($bp-xl) {
-    margin: 0 auto;
+    // margin: 0 auto;
     &::before {
       left: 50%;
       margin-left: -2px;
