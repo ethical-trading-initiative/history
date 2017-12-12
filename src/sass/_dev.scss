@@ -7,10 +7,10 @@
   z-index: -8;
   margin-top: -100vh;
   .circle {
-    @include size(100px);
+    @include size(300px);
     position: absolute;
     border-radius: 100%;
     background-color: rgba($c-brand-bright-yellow, 0.3);
-    left: calc(50% - 50px);
+    left: calc(50% - 150px);
   }
 }
