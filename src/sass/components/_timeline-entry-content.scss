@@ -2,7 +2,7 @@
   $bg-color: white;
   @include clearfix;
   position: relative;
-  margin-left: 60px;
+  margin: 0 15px 0 75px;
   background-color: $bg-color;
   padding: 1em;
   box-shadow: $box-shadow--default;
@@ -31,7 +31,7 @@
   }
 
   @include breakpoint($bp-xl) {
-    margin-left: 0;
+    margin: 0;
     padding: 1.6em;
     // Half the available space,
     // minus half the date marker width,

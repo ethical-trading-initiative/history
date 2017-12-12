@@ -4,7 +4,7 @@
 
   &.event {
     max-width: $bp-xl;
-    margin: 2em 15px;
+    margin: 2em auto;
 
     @include breakpoint($bp-xl) {
       margin: 4em auto;
