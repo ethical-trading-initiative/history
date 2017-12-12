@@ -1,19 +1,8 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( type='event', uid='', year='', month='', title='', body='', btn_url='', media={} ) -%}
+{% macro entry( uid='', year='', month='', title='', body='', btn_url='', media={} ) -%}
 
-  {% if type === 'year' %}
-
-  <div class="timeline-entry year">
-    <div class="year-content">
-      <h2>{{ year }}</h2>
-    </div>
-  </div>
-  <div class="timeline-entry blank"></div>
-
-  {% else %}
-
-  <div class="timeline-entry event">
+  <div class="timeline-entry">
 
     <div class="timeline-entry-date">
       <div class="date__header">{{ month }}</div>
@@ -46,7 +35,5 @@
     </div>
 
   </div>
-
-  {% endif %}
 
 {%- endmacro %}

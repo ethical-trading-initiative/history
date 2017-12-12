@@ -1,10 +1,6 @@
 {
   "entries": [
     {
-      "type": "year",
-      "year": "2014"
-    },
-    {
       "year": "2014",
       "month": "Jan",
       "title": "Entry title",
@@ -50,10 +46,6 @@
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
       "btn_url": "https://www.ethicaltrade.org"
-    },
-    {
-      "type": "year",
-      "year": "2015"
     },
     {
       "year": "2015",
@@ -75,10 +67,6 @@
       "body": "<p>This is the body of the last entry.</p>"
     },
     {
-      "type": "year",
-      "year": "2016"
-    },
-    {
       "year": "2016",
       "month": "Jan",
       "title": "Entry title",
@@ -124,10 +112,6 @@
       "title": "Entry title",
       "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
       "btn_url": "https://www.ethicaltrade.org"
-    },
-    {
-      "type": "year",
-      "year": "2017"
     },
     {
       "year": "2017",
