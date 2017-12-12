@@ -1,9 +1,32 @@
 .timeline-entry {
   @include clearfix;
   position: relative;
-  margin: 2em 0;
 
-  @include breakpoint($bp-xl) {
-    margin: 4em 0;
+  &.event {
+    max-width: $bp-xl;
+    margin: 2em 15px;
+
+    @include breakpoint($bp-xl) {
+      margin: 4em auto;
+    }
+  }
+
+  &.year {
+    background-color: rgba($c-brand-ruby, 0.5);
+    padding: $space--large;
+    z-index: 0;
+  }
+  .year-content {
+    h2 {
+      color: white;
+      margin: 0;
+      text-align: center;
+      @include breakpoint($bp-med) {
+        margin: 0;
+      }
+      @include breakpoint($bp-xl) {
+        text-align: left;
+      }
+    }
   }
 }
