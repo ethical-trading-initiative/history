@@ -43,6 +43,9 @@ jQuery(document).ready(function($) {
   // Toggle entry body content
   // ---------------------------------------------------------------------------
 
+  // Debug: force all entries to be expanded by default.
+  // $(".timeline-entry").toggleClass("expanded");
+
   $( ".read-more" ).on( "click", function() {
     var $this = $(this);
     $this.parents(".timeline-entry").toggleClass("expanded");

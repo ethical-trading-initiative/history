@@ -11,7 +11,7 @@
     left: $grid-padding + ($marker-width--small / 2) - ($v-line-width/2);
     height: 100%;
     width: $v-line-width;
-    background-color: white;
+    background-color: rgba(white, 0.6);
     z-index: 0;
   }
 

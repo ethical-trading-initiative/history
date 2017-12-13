@@ -4,7 +4,7 @@
   $connection-width--large: 45px;
   position: relative;
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
-  background-color: $bg-color;
+  // background-color: $bg-color;
   // box-shadow: $box-shadow--default;
 
   &::before {
@@ -20,20 +20,36 @@
   }
 
   .timeline-entry.expanded & {
-    &::after {
-      // Arrow pointing to expanded body.
-      $size: 30px;
+    .body-connector {
+      $line-width: 5px;
+      height: 30px;
       content: '';
-      position: absolute;
+      position: relative;
       bottom: 0;
-      margin-bottom: 0-$size;
-      z-index: 10;
-      height: 0;
+      left: calc(50% - #{$line-width/2});
+      display: block;
       width: 0;
-      border: ($size/2) solid transparent;
-      border-top-color: $bg-color;
-      left: auto;
-      right: calc(50% - #{$size/2});
+      border-left: $line-width dotted white;
+      z-index: 10;
+
+      &::after {
+        @include size($marker-width--small);
+        content: '';
+        position: absolute;
+        bottom: 0 - ($marker-width--small/2);
+        left: 0 - ($marker-width--small/2) - ($line-width/2);
+        border-radius: 100%;
+        background-color: $c-brand-pale-yellow;
+      }
+
+      @include breakpoint($bp-xl) {
+        height: 50px;
+        &::after {
+          @include size($marker-width--large);
+          bottom: 0 - ($marker-width--large/2);
+          left: 0 - ($marker-width--large/2) - ($line-width/2);
+        }
+      }
     }
   }
 
@@ -52,6 +68,7 @@
 
   .card__body {
     @include clearfix;
+    background-color: $bg-color;
     padding: 1em;
   }
 
