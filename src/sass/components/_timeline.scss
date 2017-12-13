@@ -12,7 +12,7 @@
     height: 100%;
     width: $v-line-width;
     background-color: white;
-    z-index: 5;
+    z-index: 0;
   }
 
   @include breakpoint($bp-xl) {
