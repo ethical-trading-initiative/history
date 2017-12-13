@@ -6,7 +6,7 @@
   z-index: 10;
   border-radius: 100%;
   background-color: $c-brand-pale-yellow;
-  box-shadow: $box-shadow--default;
+  // box-shadow: $box-shadow--default;
 
   @include breakpoint($bp-xl) {
     @include size($marker-width--large);

@@ -9,31 +9,40 @@
       <div class="timeline-entry-marker"></div>
 
       <div class="timeline-entry-card">
+
         <div class="card__title">
           <h2>{{ year }}</h2>
         </div>
+
         <div class="card__body">
-        {{ intro | safe }}
-        {% if media %}
-        <ul class="timeline-entry-gallery">
-          {% for item in media %}
-          <li class="gallery-item">
-            {{ gallery.gallery_item(
-              label       = item.label,
-              gallery_uid = uid,
-              img_id      = item.img_id,
-              video_url   = item.video_url
-              )
-            }}
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        {% if body %}
-        {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
-        <a href="#" class="btn read-more">Read more</a>
-        {% endif %}
+
+          {{ intro | safe }}
+
+          {% if media %}
+          <ul class="timeline-entry-gallery">
+            {% for item in media %}
+            <li class="gallery-item">
+              {{ gallery.gallery_item(
+                label       = item.label,
+                gallery_uid = uid,
+                img_id      = item.img_id,
+                video_url   = item.video_url
+                )
+              }}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if body %}
+          {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
+          <div class="btn-wrapper">
+            <a href="#" class="btn read-more">Read more</a>
+          </div>
+          {% endif %}
+
         </div>
+
       </div>
 
     </div>

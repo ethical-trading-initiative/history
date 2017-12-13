@@ -55,10 +55,14 @@
     padding: 1em;
   }
 
+  .btn-wrapper {
+    text-align: center;
+  }
+
   .read-more {
     @include btn-base;
     @include btn-colors(white, $c-brand-purple);
-    float: right;
+    // float: right;
   }
 
   @include breakpoint($bp-xl) {

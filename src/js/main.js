@@ -45,7 +45,6 @@ jQuery(document).ready(function($) {
 
   $( ".read-more" ).on( "click", function() {
     var $this = $(this);
-    $this.parents(".timeline-entry").find(".timeline-entry-body").slideToggle(300);
     $this.parents(".timeline-entry").toggleClass("expanded");
     if ($this.text() === "Read more") {
       $this.text("Read less");
