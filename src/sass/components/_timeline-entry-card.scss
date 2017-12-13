@@ -19,6 +19,24 @@
     border-top: 5px dotted white;
   }
 
+  .timeline-entry.expanded & {
+    &::after {
+      // Arrow pointing to expanded body.
+      $size: 30px;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0-$size;
+      z-index: 10;
+      height: 0;
+      width: 0;
+      border: ($size/2) solid transparent;
+      border-top-color: $bg-color;
+      left: auto;
+      right: calc(50% - #{$size/2});
+    }
+  }
+
   .card__title {
     text-align: center;
     padding: 1em;

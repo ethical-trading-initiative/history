@@ -1,25 +1,31 @@
 .timeline-entry-body {
 
+  background-color: $c-grey-d1;
+  color: white;
+  // box-shadow: inset 0 0 10px rgba(black, 0.3);
+
+  margin-top: $space;
+  padding: 2em;
+
+  // Visibility
   .js & {
-    @include element-invisible;
+    display: none;
+    // @include element-invisible;
   }
-
   .timeline-entry.expanded & {
-    @include element-visible;
+    // @include element-visible;
   }
 
-  background-color: white;
-  padding: 1em;
-
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-
-  .timeline-entry:nth-child(even) & {
-    float: right;
+  .inner {
+    max-width: $bp-xl;
+    margin: 0 auto;
+    padding: 0 $grid-padding;
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include breakpoint($bp-xl) {
-    padding: 1.6em;
+    padding: 3em;
   }
 }
