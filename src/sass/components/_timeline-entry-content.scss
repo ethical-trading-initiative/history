@@ -8,9 +8,10 @@
   box-shadow: $box-shadow--default;
 
   &::before {
+    // Connection line between entry card and timeline marker.
     content: '';
     position: absolute;
-    top: 20px;
+    top: $marker-width--small/2;
     left: 0 - $connection-width--small;
     display: block;
     width: $connection-width--small;
@@ -50,7 +51,7 @@
     width: calc(50% - 30px - 30px);
 
     &::before {
-      top: 30px;
+      top: $marker-width--large/2;
       left: auto;
       right: 0 - $connection-width--large;
       width: $connection-width--large;
