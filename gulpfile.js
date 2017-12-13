@@ -55,6 +55,7 @@ gulp.task('watch', function () {
   gulp.watch('./src/sass/**/*.scss', ['sass:dev']);
   gulp.watch('./src/js/**/*.js', ['js:dev']);
   gulp.watch('./src/**/*.+(html|nunjucks|njk)', ['nunjucks']);
+  gulp.watch('./src/**/*.json', ['nunjucks']);
 });
 
 gulp.task('nunjucks', function() {
