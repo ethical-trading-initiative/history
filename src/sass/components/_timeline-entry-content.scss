@@ -4,7 +4,6 @@
   position: relative;
   margin: 0 15px 0 75px;
   background-color: $bg-color;
-  padding: 1em;
   box-shadow: $box-shadow--default;
 
   &::before {
@@ -18,11 +17,22 @@
     border-top: 5px dotted white;
   }
 
-  h2 {
-    margin-top: 0;
-    @include breakpoint($bp-med) {
-      margin-top: 0;
+  .card__title {
+    text-align: center;
+    padding: 1em;
+    background-color: $c-grey-d1;
+    h2 {
+      color: white;
+      margin: 0;
+      @include breakpoint($bp-med) {
+        margin: 0;
+      }
     }
+  }
+
+  .card__body {
+    @include clearfix;
+    padding: 1em;
   }
 
   .read-more {
@@ -32,7 +42,6 @@
 
   @include breakpoint($bp-xl) {
     margin: 0;
-    padding: 1.6em;
     // Half the available space,
     // minus half the date marker width,
     // minus a gap.
@@ -43,6 +52,14 @@
       left: auto;
       right: -30px;
       width: 30px;
+    }
+
+    .card__title {
+      padding: 1.6em;
+    }
+
+    .card__body {
+      padding: 1.6em;
     }
 
     .timeline-entry:nth-child(even) & {
