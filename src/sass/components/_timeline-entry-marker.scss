@@ -1,0 +1,28 @@
+.timeline-entry-marker {
+  @include size(20px);
+  position: absolute;
+  top: 11px;
+  left: 26px;
+  z-index: 10;
+  border-radius: 100%;
+  background-color: $c-brand-pale-yellow;
+  box-shadow: $box-shadow--default;
+
+  @include breakpoint($bp-xl) {
+    $size: 30px;
+    @include size($size);
+    margin-left: -($size/2);
+    top: 16px;
+    left: 50%;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    .cssanimations &.is-hidden {
+      visibility: hidden;
+    }
+    .cssanimations &.bounce-in {
+      visibility: visible;
+      animation: bounce-1 0.6s;
+    }
+  }
+}

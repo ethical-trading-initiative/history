@@ -7,12 +7,13 @@
   box-shadow: $box-shadow--default;
 
   &::before {
+    $width: 28px;
     content: '';
     position: absolute;
     top: 20px;
-    left: -20px;
+    left: 0 - $width;
     display: block;
-    width: 20px;
+    width: $width;
     height: 0;
     border-top: 5px dotted white;
   }
@@ -37,10 +38,12 @@
 
   .read-more {
     @include btn-base;
+    @include btn-colors(white, $c-brand-purple);
     float: right;
   }
 
   @include breakpoint($bp-xl) {
+    $connection-width: 45px;
     margin: 0;
     // Half the available space,
     // minus half the date marker width,
@@ -50,8 +53,8 @@
     &::before {
       top: 30px;
       left: auto;
-      right: -30px;
-      width: 30px;
+      right: 0 - $connection-width;
+      width: $connection-width;
     }
 
     .card__title {
@@ -67,7 +70,7 @@
 
       &::before {
         right: auto;
-        left: -30px;
+        left: 0 - $connection-width;
       }
     }
 
