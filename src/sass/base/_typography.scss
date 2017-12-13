@@ -1,0 +1,19 @@
+// TODO: Move to base styles
+blockquote,
+li,
+p {
+  widows: 3;
+  orphans: 3;
+}
+// /TODO
+
+blockquote {
+  border-left-color: $c-brand-pale-orange;
+  font-size: rem-scale(1);
+  font-family: $f-secondary;
+  font-style: normal;
+  cite {
+    font-family: $f-primary;
+    font-style: italic;
+  }
+}
