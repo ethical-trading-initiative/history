@@ -2,8 +2,8 @@
   "entries": [
     {
       "year": "1998",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org",
+      "intro": "<p>In January 1998, a small number of British retailers join aid agencies and trade unionists to discuss the promotion of fundamental human rights in global supply chains. Subsequently, under the pivotal leadership of Secretary of State for International Development Claire Short, ETI is incorporated as a not-for-profit company on 9th June. We receive start-up grants from the Department for International Development and the Department of Trade and Industry…</p>",
+      "body": "<p></p>",
       "media": [
         {
           "label": "Gallery image 1",
@@ -22,8 +22,8 @@
     },
     {
       "year": "1999",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
-      "btn_url": "https://www.ethicaltrade.org",
+      "intro": "",
+      "body": "<p></p>",
       "media": [
         {
           "label": "Gallery image",
@@ -38,75 +38,53 @@
     },
     {
       "year": "2000",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2001",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2002",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2003",
-      "body": "<p>This is the body of the last entry.</p>"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2004",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image 1",
-          "img_id": "mountains"
-        },
-        {
-          "label": "Gallery image 2",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "chicken",
-          "video_url": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2005",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>",
-      "btn_url": "https://www.ethicaltrade.org",
-      "media": [
-        {
-          "label": "Gallery image",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "beach",
-          "video_url": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2006",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p><p> Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2007",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>",
-      "btn_url": "https://www.ethicaltrade.org"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2008",
-      "body": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>"
+      "intro": "",
+      "body": "<p></p>"
     },
     {
       "year": "2009",
-      "body": "<p>This is the body of the last entry.</p>"
+      "intro": "",
+      "body": "<p></p>"
     }
   ]
 }
