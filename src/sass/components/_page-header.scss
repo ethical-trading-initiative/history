@@ -12,12 +12,12 @@
     content: '';
     position: absolute;
     bottom: 0;
-    left: 21px;
-    margin-bottom: -30px;
+    left: $grid-padding;
+    margin-bottom: 0-$marker-width--small;
     z-index: 10;
     height: 0;
     width: 0;
-    border: 15px solid transparent;
+    border: ($marker-width--small/2) solid transparent;
     border-top-color: $bg-color;
   }
 
@@ -36,8 +36,10 @@
 
   @include breakpoint($bp-xl) {
     &::after {
+      margin-bottom: 0-$marker-width--large;
+      border-width: $marker-width--large/2;
       left: auto;
-      right: calc(50% - 15px);
+      right: calc(50% - #{$marker-width--large/2});
     }
   }
 }

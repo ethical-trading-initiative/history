@@ -2,9 +2,16 @@
   @include clearfix;
   position: relative;
   max-width: $bp-xl;
-  margin: 2em auto;
+  margin: 2em auto 0;
+  &:first-child {
+    margin-top: 0;
+  }
 
   @include breakpoint($bp-xl) {
-    margin: 4em auto;
+    margin-top: 4em;
+    padding: 0 $grid-padding;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

@@ -1,19 +1,20 @@
 .timeline-entry-content {
   $bg-color: white;
+  $connection-width--small: 28px;
+  $connection-width--large: 45px;
   @include clearfix;
   position: relative;
-  margin: 0 15px 0 75px;
+  margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
   background-color: $bg-color;
   box-shadow: $box-shadow--default;
 
   &::before {
-    $width: 28px;
     content: '';
     position: absolute;
     top: 20px;
-    left: 0 - $width;
+    left: 0 - $connection-width--small;
     display: block;
-    width: $width;
+    width: $connection-width--small;
     height: 0;
     border-top: 5px dotted white;
   }
@@ -43,7 +44,6 @@
   }
 
   @include breakpoint($bp-xl) {
-    $connection-width: 45px;
     margin: 0;
     // Half the available space,
     // minus half the date marker width,
@@ -53,8 +53,8 @@
     &::before {
       top: 30px;
       left: auto;
-      right: 0 - $connection-width;
-      width: $connection-width;
+      right: 0 - $connection-width--large;
+      width: $connection-width--large;
     }
 
     .card__title {
@@ -70,7 +70,7 @@
 
       &::before {
         right: auto;
-        left: 0 - $connection-width;
+        left: 0 - $connection-width--large;
       }
     }
 

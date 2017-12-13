@@ -1,21 +1,23 @@
 .timeline {
+  $v-line-width: 4px;
   @include clearfix;
   position: relative;
-  padding: 0 0 2em 0;
+  padding-top: 2em;
 
   &::before {
     // This is the vertical line.
     content: '';
     position: absolute;
     top: 0;
-    left: 34px;
+    left: $grid-padding + ($marker-width--small / 2) - ($v-line-width/2);
     height: 100%;
-    width: 4px;
+    width: $v-line-width;
     background-color: white;
     z-index: 5;
   }
 
   @include breakpoint($bp-xl) {
+    padding-top: 4em;
     &::before {
       left: 50%;
       margin-left: -2px;
