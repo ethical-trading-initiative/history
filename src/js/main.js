@@ -22,13 +22,13 @@ jQuery(document).ready(function($) {
   //
   // function hideEntries(entries, offset) {
   //   entries.each(function() {
-  //     ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.timeline-entry-marker, .timeline-entry-content').addClass('is-hidden');
+  //     ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.timeline-entry-marker, .timeline-entry-card').addClass('is-hidden');
   //   });
   // }
   //
   // function showEntries(entries, offset) {
   //   entries.each(function() {
-  //     ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.timeline-entry-marker').hasClass('is-hidden')) && $(this).find('.timeline-entry-marker, .timeline-entry-content').removeClass('is-hidden').addClass('bounce-in');
+  //     ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.timeline-entry-marker').hasClass('is-hidden')) && $(this).find('.timeline-entry-marker, .timeline-entry-card').removeClass('is-hidden').addClass('bounce-in');
   //   });
   // }
 

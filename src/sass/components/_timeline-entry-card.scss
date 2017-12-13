@@ -1,4 +1,4 @@
-.timeline-entry-content {
+.timeline-entry-card {
   $bg-color: white;
   $connection-width--small: 28px;
   $connection-width--large: 45px;
@@ -90,7 +90,7 @@
 
 @include breakpoint($bp-xl) {
   /* inverse bounce effect on even content blocks */
-  .cssanimations .timeline-entry:nth-child(even) .timeline-entry-content.bounce-in {
+  .cssanimations .timeline-entry:nth-child(even) .timeline-entry-card.bounce-in {
     animation: bounce-2-inverse 0.6s;
   }
 }
