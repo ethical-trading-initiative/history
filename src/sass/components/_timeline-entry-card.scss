@@ -5,7 +5,7 @@
   position: relative;
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
   background-color: $bg-color;
-  box-shadow: $box-shadow--default;
+  // box-shadow: $box-shadow--default;
 
   &::before {
     // Connection line between entry card and timeline marker.

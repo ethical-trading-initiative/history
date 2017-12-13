@@ -28,10 +28,17 @@
       </ul>
       {% endif %}
       {% if body %}
+      {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
       <a href="#" class="btn read-more">Read more</a>
       {% endif %}
       </div>
     </div>
+
+    {% if body %}
+    <div class="timeline-entry-body">
+      {{ body | safe }}
+    </div>
+    {% endif %}
 
   </div>
 

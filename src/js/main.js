@@ -40,4 +40,18 @@ jQuery(document).ready(function($) {
     buttons: ['close']
   });
 
+  // Toggle entry body content
+  // ---------------------------------------------------------------------------
+
+  // TODO: Too many DOM trips. Optimise.
+  $( ".read-more" ).on( "click", function() {
+    var $this = $(this);
+    $this.parents(".timeline-entry").toggleClass("expanded");
+    if ($this.text() === "Read more") {
+      $this.text("Read less");
+    } else {
+      $this.text("Read more");
+    }
+  });
+
 });

@@ -1,0 +1,25 @@
+.timeline-entry-body {
+
+  .js & {
+    @include element-invisible;
+  }
+
+  .timeline-entry.expanded & {
+    @include element-visible;
+  }
+
+  background-color: white;
+  padding: 1em;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-entry:nth-child(even) & {
+    float: right;
+  }
+
+  @include breakpoint($bp-xl) {
+    padding: 1.6em;
+  }
+}
