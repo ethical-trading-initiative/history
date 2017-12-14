@@ -8,12 +8,16 @@ p {
 // /TODO
 
 blockquote {
-  border-left-color: $c-brand-mint-green;
   font-size: rem-scale(1);
+  border-left-color: $c-brand-mint-green;
   font-family: $f-secondary;
   font-style: normal;
   cite {
     font-family: $f-primary;
     font-style: italic;
   }
+
+  @include breakpoint($bp-med) {
+    font-size: rem-scale(2);
+  };
 }

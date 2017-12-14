@@ -22,6 +22,17 @@
     }
   }
 
+  ul, ol {
+    @include highlighted-block;
+    color: $c-brand-burgundy;
+    li {
+      margin: 1rem 0 0 1rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   @include breakpoint($bp-large) {
     .inner-wrapper {
       column-count: 2;
