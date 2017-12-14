@@ -1,6 +1,7 @@
 .timeline-entry-body {
-  background-color: white;
-  padding: 2em;
+  $connection-width--small: 28px;
+  // padding-left lines up with .timeline-entry-card's margin-left.
+  margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
 
   // Visibility
   .js & {
@@ -11,9 +12,8 @@
   }
 
   .inner-wrapper {
-    max-width: $bp-xl;
-    margin: 0 auto;
-    padding: 0 $grid-padding;
+    background-color: white;
+    padding: 1em;
     & > *:first-child {
       margin-top: 0;
     }
@@ -33,8 +33,12 @@
     }
   }
 
-  @include breakpoint($bp-large) {
+  @include breakpoint($bp-xl) {
+    margin: 0 auto;
+    max-width: $bp-xl;
+    padding: 0 $grid-padding;
     .inner-wrapper {
+      padding: 2em;
       column-count: 2;
       column-gap: 2em;
     }
