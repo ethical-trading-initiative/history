@@ -16,7 +16,7 @@
 
         <div class="card__body">
 
-          {{ intro | safe }}
+          <p>{{ intro | safe }}</p>
 
           {% if media %}
           <ul class="timeline-entry-gallery">
@@ -34,30 +34,24 @@
           </ul>
           {% endif %}
 
-          {% if body %}
           {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
           <div class="btn-wrapper">
             <a href="#" class="btn read-more">Read more</a>
           </div>
-          {% endif %}
 
         </div>
 
-        {% if body %}
         <div class="body-connector"></div>
-        {% endif %}
 
       </div>
 
     </div>
 
-    {% if body %}
     <div class="timeline-entry-body">
       <div class="inner">
-        {{ body | safe }}
+        {% include "../entries/" + year + ".njk" %}
       </div>
     </div>
-    {% endif %}
 
   </div>
 
