@@ -10,7 +10,7 @@
     @include element-visible;
   }
 
-  .inner {
+  .inner-wrapper {
     max-width: $bp-xl;
     margin: 0 auto;
     padding: 0 $grid-padding;
@@ -22,8 +22,10 @@
     }
   }
 
-  @include breakpoint($bp-xl) {
-    column-count: 2;
-    column-gap: 1em;
+  @include breakpoint($bp-large) {
+    .inner-wrapper {
+      column-count: 2;
+      column-gap: 2em;
+    }
   }
 }
