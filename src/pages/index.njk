@@ -10,6 +10,13 @@
     <h1>Ethical Trading Initiative - 20 years</h1>
   </header>
 
+  <div class="overlay-shim parallax-item slow"></div>
+
+  {# Must be before .timeline or it'll jump around when toggling entry bodies. #}
+  {# <div class="debris parallax-item slow">
+    <div class="circle"></div>
+  </div> #}
+
   <div class="timeline">
     {% for entry in entries %}
     {{ timeline.entry(
@@ -23,11 +30,8 @@
     {% endfor %}
   </div>
 
-  <div class="debris parallax-item slow">
-    <div class="circle"></div>
-  </div>
 
-  <div class="overlay-shim parallax-item slow"></div>
+
 
 </div>
 
