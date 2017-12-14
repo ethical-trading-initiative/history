@@ -1,5 +1,5 @@
 .timeline-entry-body {
-  $connection-width--small: 28px;
+  $connection-width--small: 28px; // width of parent entry connector
   // padding-left lines up with .timeline-entry-card's margin-left.
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
 

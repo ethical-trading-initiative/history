@@ -32,23 +32,23 @@
       border-left: $line-width dotted white;
       z-index: 10;
 
-      &::after {
-        @include size($marker-width--small);
-        content: '';
-        position: absolute;
-        bottom: 0 - ($marker-width--small/2);
-        left: 0 - ($marker-width--small/2) - ($line-width/2);
-        border-radius: 100%;
-        background-color: $c-brand-pale-yellow;
-      }
+      // &::after {
+      //   @include size($marker-width--small);
+      //   content: '';
+      //   position: absolute;
+      //   bottom: 0 - ($marker-width--small/2);
+      //   left: 0 - ($marker-width--small/2) - ($line-width/2);
+      //   border-radius: 100%;
+      //   background-color: $c-brand-pale-yellow;
+      // }
 
       @include breakpoint($bp-xl) {
         height: 50px;
-        &::after {
-          @include size($marker-width--large);
-          bottom: 0 - ($marker-width--large/2);
-          left: 0 - ($marker-width--large/2) - ($line-width/2);
-        }
+        // &::after {
+        //   @include size($marker-width--large);
+        //   bottom: 0 - ($marker-width--large/2);
+        //   left: 0 - ($marker-width--large/2) - ($line-width/2);
+        // }
       }
     }
   }
