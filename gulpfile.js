@@ -167,7 +167,8 @@ gulp.task('modernizr', function() {
       tests: [
         // Used to detect < IE10.
         // See unsupported-browser.js.
-        'svgfilters'
+        'svgfilters',
+        'touchevents'
       ]
     }))
     .pipe(uglify())
@@ -289,6 +290,9 @@ gulp.task('copyOtherFilesToDist', function() {
 
   gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
     .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
+
+  gulp.src('./node_modules/scrollmagic/scrollmagic/minified/**/*.min.*')
+    .pipe(gulp.dest('./dist/vendor/scrollmagic'));
 
   gulp.src('./src/robots.txt')
     .pipe(gulp.dest('./dist'));

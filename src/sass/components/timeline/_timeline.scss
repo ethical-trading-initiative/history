@@ -16,6 +16,7 @@
   // Diagonal stripes
   // TODO: Adjust stripe height at different breakpoints.
   // TODO: Adjust alpha values at different breakpoints.
+  // TODO: Setting .timeline's background does mean that it sappears to move when toggling entry bodies.
   background-image: repeating-linear-gradient(
       -5deg,
       $stripe-color-1 $offset,

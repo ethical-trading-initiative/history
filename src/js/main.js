@@ -1,36 +1,23 @@
 jQuery(document).ready(function($) {
 
-  // Reveal timeline entires on scroll
+  // ScrollMagic
   // ---------------------------------------------------------------------------
 
-  // var timelineEntries = $('.timeline-entry');
-  // // TODO: offset seems very sensitive to content (header height?)
-  // var offset = 0.9; // was 0.8
-  //
-  // // Hide timeline entries that are outside the viewport.
-  // hideEntries(timelineEntries, offset);
-  //
-  // // On scolling, show/animate timeline entries when they enter the viewport.
-  // $(window).on('scroll', function() {
-  //   (!window.requestAnimationFrame) ?
-  //   setTimeout(function() {
-  //     showEntries(timelineEntries, offset);
-  //   }, 100): window.requestAnimationFrame(function() {
-  //     showEntries(timelineEntries, offset);
-  //   });
-  // });
-  //
-  // function hideEntries(entries, offset) {
-  //   entries.each(function() {
-  //     ($(this).offset().top > $(window).scrollTop() + $(window).height() * offset) && $(this).find('.timeline-entry-marker, .timeline-entry-card').addClass('is-hidden');
-  //   });
-  // }
-  //
-  // function showEntries(entries, offset) {
-  //   entries.each(function() {
-  //     ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.timeline-entry-marker').hasClass('is-hidden')) && $(this).find('.timeline-entry-marker, .timeline-entry-card').removeClass('is-hidden').addClass('bounce-in');
-  //   });
-  // }
+  // Init ScrollMagic
+  var controller = new ScrollMagic.Controller();
+  // Mumber of timeline entries in the DOM
+  var entryCount = 12;
+
+  for (var i=0; i<=entryCount; i++) {
+    var entry = ".tl-entry-" + i;
+    // Create ScrollMagic scene
+    var entryScene = new ScrollMagic.Scene({
+        triggerElement: entry,
+        offset: -300
+    })
+    .setClassToggle(entry, 'is-active')
+    .addTo(controller);
+  }
 
   // Image & video galleries
   // ---------------------------------------------------------------------------
@@ -43,17 +30,22 @@ jQuery(document).ready(function($) {
   // Toggle entry body content
   // ---------------------------------------------------------------------------
 
-  // Debug: force all entries to be expanded by default.
-  // $(".timeline-entry").toggleClass("expanded");
+  function toggleEntryBody($entry) {
+    var $btn = $entry.find(".read-more");
+    $entry.toggleClass("expanded");
+    if ($btn.text() === "Read more") {
+      $btn.text("Read less");
+    } else {
+      $btn.text("Read more");
+    }
+  }
 
   $( ".read-more" ).on( "click", function() {
-    var $this = $(this);
-    $this.parents(".timeline-entry").toggleClass("expanded");
-    if ($this.text() === "Read more") {
-      $this.text("Read less");
-    } else {
-      $this.text("Read more");
-    }
+    toggleEntryBody( $(this).parents(".timeline-entry") );
   });
+
+  // Debug: force all entries to be expanded by default
+  // (btn labels aren't updated correctlty).
+  // toggleEntryBody( $(".timeline-entry") );
 
 });
