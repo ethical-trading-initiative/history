@@ -1,2 +1,20 @@
 // Nothing should stay here.
 // -----------------------------------------------------------------------------
+
+.bohea {
+  background-color: rgba(white, 0.3);
+  // border-top: dashed 2px rgba(white, 0.5);
+  // background: url(../images/svg/graph-paper.svg);
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 150px;
+  // Close the relative space by adding negative margin-top equal to
+  // the element's height or any borders.
+  margin-top: -150px;
+  // Position vertically.
+  // This isn't very accurate, likely due to the scaling and 3D transforms.
+  // Vertical positioning should vary by breakpoint point to account for varying document length.
+  bottom: 50%;
+  left: 0;
+}

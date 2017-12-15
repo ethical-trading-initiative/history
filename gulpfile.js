@@ -294,6 +294,9 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/scrollmagic/scrollmagic/minified/**/*.min.*')
     .pipe(gulp.dest('./dist/vendor/scrollmagic'));
 
+  gulp.src('./node_modules/gsap/ScrollToPlugin.js')
+    .pipe(gulp.dest('./dist/vendor/gsap'));
+
   gulp.src('./src/robots.txt')
     .pipe(gulp.dest('./dist'));
 

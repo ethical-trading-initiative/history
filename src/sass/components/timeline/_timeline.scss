@@ -25,7 +25,8 @@
       $stripe-color-2 ($stripe-height*2)+$offset,
       $stripe-color-3 ($stripe-height*2)+$offset,
       $stripe-color-3 ($stripe-height*3)+$offset
-  );
+  ),
+  url(../images/svg/graph-paper.svg);
 
   &::before {
     // This is the vertical line.
