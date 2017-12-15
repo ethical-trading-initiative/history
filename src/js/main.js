@@ -4,9 +4,11 @@ jQuery(document).ready(function($) {
   // ---------------------------------------------------------------------------
 
   // Init ScrollMagic
-  var controller = new ScrollMagic.Controller();
+  var controller = new ScrollMagic.Controller(
+    // {addIndicators: true}
+  );
   // Mumber of timeline entries in the DOM
-  var entryCount = 12;
+  var entryCount = 11;
 
   for (var i=0; i<=entryCount; i++) {
     var entry = ".tl-entry-" + i;
