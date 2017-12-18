@@ -18,19 +18,37 @@
   }
 }
 
-// .debris {
-//   position: relative;
-//   width: 100%;
-//   z-index: -1;
-//   width: 100%;
-//   height: 100px;
-//   background-color: rgba(white, 0.5);
-//   // Close the relative space by adding negative margin-top equal to
-//   // the element's height or any borders.
-//   margin-top: -100px;
-//   // Position vertically.
-//   // This isn't very accurate, likely due to the scaling and 3D transforms.
-//   // Vertical positioning should vary by breakpoint point to account for varying document length.
-//   top: 100vw;
-//   left: 0;
-// }
+.debris {
+  // Set $height to half what's needed to account for scale and translate-Z.
+  $height: 200px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  width: 100%;
+  height: $height;
+  // background-color: rgba(white, 0.2);
+  background: url(../images/svg/graph-paper.svg);
+  // Close the relative space by adding negative margin-top equal to
+  // the element's height or any borders.
+  margin-top: 0-$height;
+  left: 0;
+}
+
+// Position .debris-* variants vertically.
+// This isn't very accurate, likely due to the scaling and 3D transforms.
+// Using vw units so that positioning is relative to the document height
+// (which is related to the viewport width).
+// TODO: Adjust top value at each breakpoint.
+// TODO: Add offset value for approx. header height.
+.debris-1 {
+  top: 100vw;
+  // background-color: red; // debug
+}
+.debris-2 {
+  top: 300vw;
+  // background-color: blue; // debug
+}
+.debris-3 {
+  top: 500vw;
+  // background-color: black; // debug
+}
