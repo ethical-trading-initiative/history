@@ -83,6 +83,10 @@
   }
 
   @include breakpoint($bp-xl) {
+    float: left;
+
+    //
+
     margin: 0;
     // Half the available space,
     // minus half the date marker width,

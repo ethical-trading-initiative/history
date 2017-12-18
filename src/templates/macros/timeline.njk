@@ -1,6 +1,6 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', year='', intro='', body='', media={} ) -%}
+{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', media={} ) -%}
 
   <div class="timeline-entry tl-entry-{{ uid }}">
 
@@ -43,6 +43,12 @@
 
         <div class="body-connector"></div>
 
+      </div>
+
+      <div class="pullquote">
+        <blockquote>{{ blockquote }}
+          <cite>{{ cite }}</cite>
+        </blockquote>
       </div>
 
     </div>

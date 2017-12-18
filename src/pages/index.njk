@@ -19,11 +19,13 @@
   <div class="timeline">
     {% for entry in entries %}
     {{ timeline.entry(
-      uid     = loop.index0,
-      year    = entry.year,
-      intro   = entry.intro,
-      body    = entry.body,
-      media   = entry.media
+      uid         = loop.index0,
+      year        = entry.year,
+      intro       = entry.intro,
+      body        = entry.body,
+      blockquote  = entry.blockquote,
+      cite        = entry.cite,
+      media       = entry.media
       )
     }}
     {% endfor %}

@@ -20,3 +20,23 @@
   bottom: 50%;
   left: 0;
 }
+
+.pullquote {
+  blockquote {
+    margin: 0;
+    color: white;
+    border-left-color: rgba(white, 0.3);
+    cite {
+      color: rgba(white, 0.8);
+    }
+  }
+
+  @include breakpoint($bp-xl) {
+    margin: 0;
+    // Half the available space,
+    // minus half the date marker width,
+    // minus a gap.
+    width: calc(50% - 30px - 30px);
+    float: right;
+  }
+}
