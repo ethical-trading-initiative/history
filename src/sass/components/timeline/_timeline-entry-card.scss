@@ -126,7 +126,7 @@
 // Animated transitions as entries become "active".
 .cssanimations.no-touchevents .timeline-entry {
   .timeline-entry-card,
-  .pullquote,
+  .timeline-entry-pullquote,
   .timeline-entry-body {
     visibility: hidden;
     opacity: 0;
@@ -135,7 +135,7 @@
   }
   &.is-active {
     .timeline-entry-card,
-    .pullquote,
+    .timeline-entry-pullquote,
     .timeline-entry-body {
       visibility: visible;
       opacity: 1;
@@ -147,7 +147,7 @@
     // Different x starting position for odd entries (entries on the left).
     &:nth-child(odd) {
       .timeline-entry-card,
-      .pullquote,
+      .timeline-entry-pullquote,
       .timeline-entry-body {
         transform: translate3d(50px, 0, 0);
       }
@@ -155,7 +155,7 @@
     // Yes, we do need to do this again now :)
     &.is-active {
       .timeline-entry-card,
-      .pullquote,
+      .timeline-entry-pullquote,
       .timeline-entry-body {
         transform: translate3d(0, 0, 0);
       }
