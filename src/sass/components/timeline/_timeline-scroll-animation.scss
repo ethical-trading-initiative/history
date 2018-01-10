@@ -19,12 +19,17 @@
   }
 
   @include breakpoint($bp-xl) {
+    .timeline-entry-pullquote {
+      transform: translate3d(50px, 0, 0);
+    }
     // Different x starting position for odd entries (entries on the left).
     &:nth-child(odd) {
       .timeline-entry-card,
-      .timeline-entry-pullquote,
       .timeline-entry-body {
         transform: translate3d(50px, 0, 0);
+      }
+      .timeline-entry-pullquote {
+        transform: translate3d(-50px, 0, 0);
       }
     }
     // Yes, we do need to do this again now :)
