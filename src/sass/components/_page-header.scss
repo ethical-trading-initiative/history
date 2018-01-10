@@ -8,18 +8,7 @@
   justify-content: center;
   position: relative;
   z-index: 20;
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: $grid-padding;
-    margin-bottom: 0-$marker-width--small;
-    z-index: 10;
-    height: 0;
-    width: 0;
-    border: ($marker-width--small/2) solid transparent;
-    border-top-color: $bg-color;
-  }
+  box-shadow: 0 4px 2px 4px rgba(black, 0.05);
 
   h1 {
     flex: 0 1 auto;
@@ -34,12 +23,4 @@
      }
   }
 
-  @include breakpoint($bp-xl) {
-    &::after {
-      margin-bottom: 0-$marker-width--large;
-      border-width: $marker-width--large/2;
-      left: auto;
-      right: calc(50% - #{$marker-width--large/2});
-    }
-  }
 }

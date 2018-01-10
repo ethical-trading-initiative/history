@@ -1,7 +1,7 @@
 .timeline-entry-marker {
   @include size($marker-width--small);
   position: absolute;
-  top: 0;
+  top: 2em;
   left: $grid-padding;
   z-index: 10;
   border-radius: 100%;
@@ -9,8 +9,7 @@
 
   @include breakpoint($bp-xl) {
     @include size($marker-width--large);
-    margin-left: 0 - ($marker-width--large/2);
-    top: 0;
     left: 50%;
+    margin-left: 0 - ($marker-width--large/2);
   }
 }

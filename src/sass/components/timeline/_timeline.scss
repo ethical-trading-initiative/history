@@ -1,7 +1,6 @@
 .timeline {
   $v-line-width: 4px;
   position: relative;
-  padding-top: 2em;
 
   // Vars used in diagonal stripes.
   $offset: 200px; // Accounts for header. By eye for now.
@@ -27,23 +26,19 @@
       $stripe-color-3 ($stripe-height*3)+$offset
   );
 
-  &::before {
-    // This is the vertical line.
-    content: '';
-    position: absolute;
-    top: 0;
-    left: $grid-padding + ($marker-width--small / 2) - ($v-line-width/2);
-    height: 100%;
-    width: $v-line-width;
-    background-color: rgba(white, 0.6);
-    z-index: 0;
-  }
-
   @include breakpoint($bp-xl) {
     padding-top: 4em;
     &::before {
+      // This is the vertical line.
+      content: '';
+      position: absolute;
+      top: 0;
       left: 50%;
-      margin-left: -2px;
+      height: 100%;
+      width: $v-line-width;
+      margin-left: -($v-line-width/2);
+      background-color: rgba(white, 0.6);
+      z-index: 0;
     }
   }
 }
