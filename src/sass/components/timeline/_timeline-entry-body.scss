@@ -11,9 +11,10 @@
     @include element-visible;
   }
 
-  .inner-wrapper {
+  .paragraphs {
     background-color: white;
-    padding: 1em;
+    margin-top: 2em;
+    padding: rem-scale(2);
     & > *:first-child {
       margin-top: 0;
     }
@@ -22,9 +23,17 @@
     }
   }
 
-  ul, ol {
-    @include highlighted-block;
+  .list {
+    font-family: $f-secondary;
+    font-size: rem-scale(1);
+
+    // background-color: rgba(white, 0.8);
+
+    background-color: lighten($c-brand-bright-yellow, 35%);
     color: $c-brand-burgundy;
+
+    padding: rem-scale(2);
+    margin: 2em 0 0;
     li {
       margin: 1rem 0 0 1rem;
       &:first-child {
@@ -38,9 +47,34 @@
     max-width: $bp-xl;
     padding: 0 $grid-padding;
     .inner-wrapper {
+      @include clearfix;
+    }
+    // TODO: The 30px & 60px values below should probably be driven by a variable.
+    .paragraphs,
+    .list {
+      width: calc(50% - 30px - 30px);
+      margin-top: 0;
       padding: 2em;
-      column-count: 2;
-      column-gap: 2em;
+    }
+    .paragraphs {
+      float: left;
+      margin-right: 60px;
+      padding-top: 0;
+    }
+    .list {
+      float: right;
+      margin-left: 60px;
+    }
+
+    .timeline-entry:nth-child(even) & {
+      .paragraphs {
+        float: right;
+        margin: 0 0 0 60px;
+      }
+      .list {
+        float: left;
+        margin: 0 60px 0 0;
+      }
     }
   }
 }

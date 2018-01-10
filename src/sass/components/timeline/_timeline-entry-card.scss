@@ -4,8 +4,6 @@
   $connection-width--large: 45px;
   position: relative;
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
-  // background-color: $bg-color;
-  // box-shadow: $box-shadow--default;
 
   &::before {
     // Connection line between entry card and timeline marker.
@@ -17,40 +15,6 @@
     width: $connection-width--small;
     height: 0;
     border-top: 5px dotted white;
-  }
-
-  .timeline-entry.expanded & {
-    .body-connector {
-      $line-width: 5px;
-      height: 30px;
-      content: '';
-      position: relative;
-      bottom: 0;
-      left: calc(50% - #{$line-width/2});
-      display: block;
-      width: 0;
-      border-left: $line-width dotted white;
-      z-index: 10;
-
-      // &::after {
-      //   @include size($marker-width--small);
-      //   content: '';
-      //   position: absolute;
-      //   bottom: 0 - ($marker-width--small/2);
-      //   left: 0 - ($marker-width--small/2) - ($line-width/2);
-      //   border-radius: 100%;
-      //   background-color: $c-brand-pale-yellow;
-      // }
-
-      @include breakpoint($bp-xl) {
-        height: 50px;
-        // &::after {
-        //   @include size($marker-width--large);
-        //   bottom: 0 - ($marker-width--large/2);
-        //   left: 0 - ($marker-width--large/2) - ($line-width/2);
-        // }
-      }
-    }
   }
 
   .card__title {
@@ -69,7 +33,7 @@
   .card__body {
     @include clearfix;
     background-color: $bg-color;
-    padding: 1em;
+    padding: rem-scale(2);
   }
 
   .btn-wrapper {
@@ -79,7 +43,6 @@
   .read-more {
     @include btn-base;
     @include btn-colors(white, $c-brand-purple);
-    // float: right;
   }
 
   @include breakpoint($bp-xl) {
