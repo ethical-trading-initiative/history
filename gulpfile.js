@@ -36,6 +36,7 @@ gulp.task('default', ['watch', 'connect']);
 gulp.task('build', [
   'imagemin',
   'gallery-images',
+  'entry-lead-images',
   // 'imagemin:sprite',
   'svg-sprite',
   'sass:prod',
@@ -103,7 +104,13 @@ gulp.task('connect', function() {
 
 gulp.task('imagemin', function () {
   // Exclude certain directories that are handled specifically in other Gulp tasks.
-  gulp.src(['src/images/**/*', '!src/images/sprite', '!src/images/sprite/**/*', '!src/images/bitmap/gallery-items/**/*'])
+  gulp.src([
+    'src/images/**/*',
+    '!src/images/sprite',
+    '!src/images/sprite/**/*',
+    '!src/images/bitmap/gallery-items/**/*',
+    '!src/images/bitmap/entry-lead/**/*'
+  ])
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images'));
 });
@@ -325,4 +332,29 @@ gulp.task('gallery-images', function () {
     }))
     .pipe(imagemin())
     .pipe(gulp.dest('dist/images/bitmap/gallery-items'));
+});
+
+gulp.task('entry-lead-images', function () {
+  return gulp.src('src/images/bitmap/entry-lead/**/*.{jpg,jpeg}')
+    .pipe(responsive({
+      '*': [
+        {
+          // Default
+          height: 460,
+          quality: 100
+        },{
+          // Large
+          rename: { suffix: '-large' },
+          height: 460,
+          quality: 100
+        }
+      ]}, {
+      // Global configuration for all images
+      format: 'jpeg',
+      progressive: true,
+      withMetadata: false,
+      withoutEnlargement: false
+    }))
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images/bitmap/entry-lead'));
 });
