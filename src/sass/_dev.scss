@@ -38,5 +38,9 @@
     // minus a gap.
     width: calc(50% - 30px - 30px);
     float: right;
+
+    .timeline-entry:nth-child(even) & {
+      float: left;
+    }
   }
 }
