@@ -24,10 +24,10 @@ jQuery(document).ready(function($) {
   // Image & video galleries
   // ---------------------------------------------------------------------------
 
-  $("[data-fancybox]").fancybox({
-    loop: true,
-    buttons: ['close']
-  });
+  // $("[data-fancybox]").fancybox({
+  //   loop: true,
+  //   buttons: ['close']
+  // });
 
   // Toggle entry body content
   // ---------------------------------------------------------------------------
