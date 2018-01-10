@@ -1,6 +1,6 @@
 'use strict';
 
-var connect = require('gulp-connect');
+var browserSync = require('browser-sync').create();
 var data = require('gulp-data');
 var filter = require('gulp-filter');
 var flatten = require('gulp-flatten');
@@ -31,7 +31,7 @@ var postcssProcessors = [
 // Primary task aliases
 // -----------------------------------------------------------------------------
 
-gulp.task('default', ['watch', 'connect']);
+gulp.task('default', ['watch']);
 
 gulp.task('build', [
   'imagemin',
@@ -53,6 +53,11 @@ gulp.task('init', [
 // -----------------------------------------------------------------------------
 
 gulp.task('watch', function () {
+
+  browserSync.init({
+    server: "./dist"
+  });
+
   gulp.watch('./src/sass/**/*.scss', ['sass:dev']);
   gulp.watch('./src/js/**/*.js', ['js:dev']);
   gulp.watch('./src/**/*.+(html|nunjucks|njk)', ['nunjucks']);
@@ -68,7 +73,7 @@ gulp.task('nunjucks', function() {
         path: ['src/templates']
       }))
     .pipe(gulp.dest('dist'))
-    .pipe(connect.reload());
+    browserSync.reload();
 });
 
 gulp.task('sass:prod', function () {
@@ -93,13 +98,7 @@ gulp.task('sass:dev', function () {
     .pipe(postcss(postcssProcessors))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/css'))
-    .pipe(connect.reload());
-});
-
-gulp.task('connect', function() {
-  connect.server({
-    livereload: true
-  });
+    .pipe(browserSync.stream());
 });
 
 gulp.task('imagemin', function () {
@@ -157,7 +156,7 @@ gulp.task('js:dev', function () {
     .pipe(flatten())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js'))
-    .pipe(connect.reload());
+    browserSync.reload();
 });
 
 gulp.task('js:prod', function () {
