@@ -30,6 +30,12 @@
     }
   }
 
+  .card__lead-image {
+    img {
+      width: 100%;
+    }
+  }
+
   .card__body {
     @include clearfix;
     background-color: $bg-color;

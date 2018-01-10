@@ -339,13 +339,16 @@ gulp.task('entry-lead-images', function () {
     .pipe(responsive({
       '*': [
         {
-          // Default
-          height: 460,
+          rename: { suffix: '-442w' },
+          width: 442,
           quality: 100
         },{
-          // Large
-          rename: { suffix: '-large' },
-          height: 460,
+          rename: { suffix: '-525w' },
+          width: 525,
+          quality: 100
+        },{
+          rename: { suffix: '-682w' },
+          width: 682,
           quality: 100
         }
       ]}, {
