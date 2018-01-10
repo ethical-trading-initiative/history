@@ -1,6 +1,7 @@
 .timeline-entry-pullquote {
+  $connection-width--small: 28px;
   blockquote {
-    margin: 0;
+    margin: 2em $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
     color: white;
     border-left-color: rgba(white, 0.3);
     cite {
