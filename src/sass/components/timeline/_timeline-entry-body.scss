@@ -1,13 +1,13 @@
-.timeline-entry-body {
+.tl-entry-body {
   $connection-width--small: 28px; // width of parent entry connector
-  // padding-left lines up with .timeline-entry-card's margin-left.
+  // padding-left lines up with .tl-entry-card's margin-left.
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
 
   // Visibility
   .js & {
     @include element-invisible;
   }
-  .timeline-entry.expanded & {
+  .tl-entry.expanded & {
     @include element-visible;
   }
 
@@ -66,7 +66,7 @@
       margin-left: 60px;
     }
 
-    .timeline-entry:nth-child(even) & {
+    .tl-entry:nth-child(even) & {
       .paragraphs {
         float: right;
         margin: 0 0 0 60px;

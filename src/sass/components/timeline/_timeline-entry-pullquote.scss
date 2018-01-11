@@ -1,4 +1,4 @@
-.timeline-entry-pullquote {
+.tl-entry-pullquote {
   $connection-width--small: 28px;
   margin: 2em $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
   blockquote {
@@ -18,7 +18,7 @@
     width: calc(50% - 30px - 30px);
     float: right;
 
-    .timeline-entry:nth-child(even) & {
+    .tl-entry:nth-child(even) & {
       float: left;
     }
   }

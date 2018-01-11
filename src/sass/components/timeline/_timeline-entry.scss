@@ -1,11 +1,11 @@
-.timeline-entry {
+.tl-entry {
   position: relative;
   margin: 0 auto;
   padding-top: 2em;
   &:first-child {
     margin-top: 0;
   }
-  .timeline-entry-initial {
+  .tl-entry-initial {
     @include clearfix;
     margin: 0 auto;
   }
@@ -15,7 +15,7 @@
     &:first-child {
       margin-top: 0;
     }
-    .timeline-entry-initial {
+    .tl-entry-initial {
       padding: 0 $grid-padding;
     }
   }

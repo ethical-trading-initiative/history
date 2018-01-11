@@ -1,17 +1,17 @@
 // Animated transitions as entries become "active".
-.cssanimations.no-touchevents .timeline-entry {
-  .timeline-entry-card,
-  .timeline-entry-pullquote,
-  .timeline-entry-body {
+.cssanimations.no-touchevents .tl-entry {
+  .tl-entry-card,
+  .tl-entry-pullquote,
+  .tl-entry-body {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-out;
     transform: translate3d(-50px, 0, 0);
   }
   &.is-active {
-    .timeline-entry-card,
-    .timeline-entry-pullquote,
-    .timeline-entry-body {
+    .tl-entry-card,
+    .tl-entry-pullquote,
+    .tl-entry-body {
       visibility: visible;
       opacity: 1;
       transform: translate3d(0, 0, 0);
@@ -19,24 +19,24 @@
   }
 
   @include breakpoint($bp-xl) {
-    .timeline-entry-pullquote {
+    .tl-entry-pullquote {
       transform: translate3d(50px, 0, 0);
     }
     // Different x starting position for odd entries (entries on the left).
     &:nth-child(odd) {
-      .timeline-entry-card,
-      .timeline-entry-body {
+      .tl-entry-card,
+      .tl-entry-body {
         transform: translate3d(50px, 0, 0);
       }
-      .timeline-entry-pullquote {
+      .tl-entry-pullquote {
         transform: translate3d(-50px, 0, 0);
       }
     }
     // Yes, we do need to do this again now :)
     &.is-active {
-      .timeline-entry-card,
-      .timeline-entry-pullquote,
-      .timeline-entry-body {
+      .tl-entry-card,
+      .tl-entry-pullquote,
+      .tl-entry-body {
         transform: translate3d(0, 0, 0);
       }
     }

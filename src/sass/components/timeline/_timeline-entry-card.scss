@@ -1,4 +1,4 @@
-.timeline-entry-card {
+.tl-entry-card {
   $bg-color: white;
   $connection-width--small: 28px;
   $connection-width--large: 45px;
@@ -74,7 +74,7 @@
       padding: 1.6em;
     }
 
-    .timeline-entry:nth-child(even) & {
+    .tl-entry:nth-child(even) & {
       float: right;
 
       &::before {

@@ -2,13 +2,13 @@
 
 {% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', media={} ) -%}
 
-  <div class="timeline-entry tl-entry-{{ uid }}">
+  <div class="tl-entry tl-entry-{{ uid }}">
 
-    <div class="timeline-entry-initial">
+    <div class="tl-entry-initial">
 
-      <div class="timeline-entry-marker"></div>
+      <div class="tl-entry-marker"></div>
 
-      <div class="timeline-entry-card">
+      <div class="tl-entry-card">
 
         <div class="card__title">
           <h2>{{ year }}</h2>
@@ -30,7 +30,7 @@
           <p>{{ intro | safe }}</p>
 
           {# {% if media %}
-          <ul class="timeline-entry-gallery">
+          <ul class="tl-entry-gallery">
             {% for item in media %}
             <li class="gallery-item">
               {{ gallery.gallery_item(
@@ -55,7 +55,7 @@
       </div>
 
       {% if blockquote %}
-      <div class="timeline-entry-pullquote">
+      <div class="tl-entry-pullquote">
         <blockquote>{{ blockquote }}
           <cite>{{ cite }}</cite>
         </blockquote>
@@ -64,7 +64,7 @@
 
     </div>
 
-    <div class="timeline-entry-body">
+    <div class="tl-entry-body">
       <div class="inner-wrapper">
         {% include "../entries/" + year + ".njk" %}
       </div>

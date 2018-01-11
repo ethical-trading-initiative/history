@@ -43,11 +43,11 @@ jQuery(document).ready(function($) {
   }
 
   $( ".read-more" ).on( "click", function() {
-    toggleEntryBody( $(this).parents(".timeline-entry") );
+    toggleEntryBody( $(this).parents(".tl-entry") );
   });
 
   // Debug: force all entries to be expanded by default
   // (btn labels aren't updated correctlty).
-  // toggleEntryBody( $(".timeline-entry") );
+  // toggleEntryBody( $(".tl-entry") );
 
 });
