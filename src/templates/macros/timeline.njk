@@ -1,6 +1,6 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', media={} ) -%}
+{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', list='', media={} ) -%}
 
   <div class="tl-entry tl-entry-{{ uid }}">
 
@@ -64,6 +64,13 @@
 
       <div class="tl-entry-body">
         {% include "../entries/" + year + ".njk" %}
+        {% if list %}
+        <ul class="list">
+          {% for item in list %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
 
     </div>
