@@ -1,0 +1,25 @@
+.timeline-wrapper {
+  // Vars used in diagonal stripes.
+  $offset: 200px; // Accounts for header. By eye for now.
+  $stripe-height: 1500px;
+  $alpha: 0.8;
+  // $stripe-color-1: rgba($c-brand-blue-teal, $alpha);
+  // $stripe-color-2: rgba($c-brand-dusty-pink, $alpha);
+  $stripe-color-1: rgba($c-brand-bright-orange, $alpha);
+  $stripe-color-2: rgba($c-brand-mint-green, $alpha);
+  $stripe-color-3: rgba($c-brand-cool-pink, $alpha);
+
+  // Diagonal stripes
+  // TODO: Adjust stripe height at different breakpoints.
+  // TODO: Adjust alpha values at different breakpoints.
+  // TODO: Setting .timeline's background does mean that it sappears to move when toggling entry bodies.
+  background-image: repeating-linear-gradient(
+      -5deg,
+      $stripe-color-1 $offset,
+      $stripe-color-1 $stripe-height+$offset,
+      $stripe-color-2 $stripe-height+$offset,
+      $stripe-color-2 ($stripe-height*2)+$offset,
+      $stripe-color-3 ($stripe-height*2)+$offset,
+      $stripe-color-3 ($stripe-height*3)+$offset
+  );
+}

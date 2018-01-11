@@ -1,9 +1,7 @@
 .timeline-entry {
-  $v-line-width: 4px;
   position: relative;
   margin: 0 auto;
   padding-top: 2em;
-  max-width: 760px;
   &:first-child {
     margin-top: 0;
   }
@@ -17,16 +15,15 @@
     content: '';
     position: absolute;
     top: 0;
-    left: $grid-padding + ($marker-width--small / 2) - ($v-line-width/2);
+    left: $grid-padding + ($marker-width--small / 2) - ($tl-line-width/2);
     height: 100%;
-    width: $v-line-width;
+    width: $tl-line-width;
     background-color: rgba(white, 0.6);
     z-index: 0;
   }
 
   @include breakpoint($bp-xl) {
     margin-top: 4em;
-    max-width: none;
     &::before {
       // This is the vertical line.
       content: none;
@@ -35,7 +32,6 @@
       margin-top: 0;
     }
     .timeline-entry-initial {
-      max-width: $bp-xl;
       padding: 0 $grid-padding;
     }
   }

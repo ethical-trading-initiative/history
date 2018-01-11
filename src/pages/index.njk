@@ -16,24 +16,28 @@
   <div class="debris debris-2 parallax-item slow"></div>
   <div class="debris debris-3 parallax-item slow"></div> #}
 
-  <div class="timeline">
+  <div class="timeline-wrapper">
 
-    <div class="timeline-intro">
-      <p>The Ethical Trading Initiative was founded in 1998 in response to growing concerns about the poor pay and conditions of workers in many international supply chains. Since then we have helped change the lives of millions of workers by driving improvements in company policies and practices and through campaigning for change.</p>
+    <div class="timeline">
+
+      {# <div class="timeline-intro">
+        <p>The Ethical Trading Initiative was founded in 1998 in response to growing concerns about the poor pay and conditions of workers in many international supply chains. Since then we have helped change the lives of millions of workers by driving improvements in company policies and practices and through campaigning for change.</p>
+      </div> #}
+
+      {% for entry in entries %}
+      {{ timeline.entry(
+        uid         = loop.index0,
+        year        = entry.year,
+        intro       = entry.intro,
+        body        = entry.body,
+        blockquote  = entry.blockquote,
+        cite        = entry.cite,
+        media       = entry.media
+        )
+      }}
+      {% endfor %}
+
     </div>
-
-    {% for entry in entries %}
-    {{ timeline.entry(
-      uid         = loop.index0,
-      year        = entry.year,
-      intro       = entry.intro,
-      body        = entry.body,
-      blockquote  = entry.blockquote,
-      cite        = entry.cite,
-      media       = entry.media
-      )
-    }}
-    {% endfor %}
 
   </div>
 
