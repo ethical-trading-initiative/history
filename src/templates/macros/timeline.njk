@@ -29,6 +29,10 @@
 
           <p>{{ intro | safe }}</p>
 
+          <div class="paragraphs">
+            {% include "../entries/" + year + ".njk" %}
+          </div>
+
           {# {% if media %}
           <ul class="tl-entry-gallery">
             {% for item in media %}
@@ -62,21 +66,13 @@
       </div>
       {% endif %}
 
-      <div class="tl-entry-body">
-
-        <div class="paragraphs">
-          {% include "../entries/" + year + ".njk" %}
-        </div>
-
-        {% if list %}
-        <ul class="list">
-          {% for item in list %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        
-      </div>
+      {% if list %}
+      <ul class="list">
+        {% for item in list %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
     </div>
 

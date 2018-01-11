@@ -1,8 +1,5 @@
-.tl-entry-body {
-  $connection-width--small: 28px; // width of parent entry connector
-
-  margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
-
+.paragraphs,
+.list {
   // Visibility
   .js & {
     @include element-invisible;
@@ -10,62 +7,36 @@
   .tl-entry.expanded & {
     @include element-visible;
   }
+}
 
-  .paragraphs {
-    background-color: white;
-    margin-top: 2em;
-    padding: rem-scale(2);
-    & > *:first-child {
+.list {
+  $connection-width--small: 28px;
+  margin: 2em $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
+  font-family: $f-secondary;
+  background-color: lighten($c-brand-bright-yellow, 35%);
+  color: $c-brand-burgundy;
+  padding: rem-scale(2);
+  li {
+    margin: 1rem 0 0 1rem;
+    &:first-child {
       margin-top: 0;
     }
-    & > *:last-child {
-      margin-bottom: 0;
-    }
   }
+}
 
+@include breakpoint($bp-xl) {
+  // TODO: The 30px & 60px values below should probably be driven by a variable.
   .list {
-    font-family: $f-secondary;
-    background-color: lighten($c-brand-bright-yellow, 35%);
-    color: $c-brand-burgundy;
-    padding: rem-scale(2);
-    margin: 2em 0 0;
-    li {
-      margin: 1rem 0 0 1rem;
-      &:first-child {
-        margin-top: 0;
-      }
-    }
+    width: calc(50% - 30px - 30px);
+    margin: 0 0 0 60px;
+    padding: 2em;
+    float: right;
   }
 
-  @include breakpoint($bp-xl) {
-    margin: 0;
-    float: left;
-    // TODO: The 30px & 60px values below should probably be driven by a variable.
-    .paragraphs,
+  .tl-entry:nth-child(even) {
     .list {
-      width: calc(50% - 30px - 30px);
-      margin-top: 0;
-      padding: 2em;
-    }
-    .paragraphs {
       float: left;
-      margin-right: 60px;
-      padding-top: 0;
-    }
-    .list {
-      float: right;
-      margin-left: 60px;
-    }
-
-    .tl-entry:nth-child(even) & {
-      .paragraphs {
-        float: right;
-        margin: 0 0 0 60px;
-      }
-      .list {
-        float: left;
-        margin: 0 60px 0 0;
-      }
+      margin: 0 60px 0 0;
     }
   }
 }
