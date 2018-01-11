@@ -25,13 +25,8 @@
 
   .list {
     font-family: $f-secondary;
-    // font-size: rem-scale(1);
-
-    // background-color: rgba(white, 0.8);
-
     background-color: lighten($c-brand-bright-yellow, 35%);
     color: $c-brand-burgundy;
-
     padding: rem-scale(2);
     margin: 2em 0 0;
     li {
@@ -43,12 +38,10 @@
   }
 
   @include breakpoint($bp-xl) {
+    @include clearfix;
     margin: 0 auto;
     max-width: $bp-xl;
     padding: 0 $grid-padding;
-    .inner-wrapper {
-      @include clearfix;
-    }
     // TODO: The 30px & 60px values below should probably be driven by a variable.
     .paragraphs,
     .list {
