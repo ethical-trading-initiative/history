@@ -342,12 +342,12 @@ gulp.task('entry-lead-images', function () {
           width: 442,
           quality: 100
         },{
-          rename: { suffix: '-525w' },
-          width: 525,
-          quality: 100
-        },{
           rename: { suffix: '-682w' },
           width: 682,
+          quality: 100
+        },{
+          rename: { suffix: '-710w' },
+          width: 710,
           quality: 100
         }
       ]}, {

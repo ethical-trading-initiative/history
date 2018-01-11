@@ -9,7 +9,7 @@
   @include breakpoint($bp-xl) {
     margin: 4em auto;
     .tl-entry-initial {
-      padding: 0 $grid-padding;
+      padding: 0 $grid-padding*2;
     }
   }
 }
