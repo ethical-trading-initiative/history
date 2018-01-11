@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
   });
 
   // Debug: force all entries to be expanded by default
-  // (btn labels aren't updated correctlty).
+  // (btn labels aren't updated correctly).
   // toggleEntryBody( $(".tl-entry") );
 
 });

@@ -1,6 +1,6 @@
 .tl-entry-body {
   $connection-width--small: 28px; // width of parent entry connector
-  // padding-left lines up with .tl-entry-card's margin-left.
+
   margin: 0 $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
 
   // Visibility
@@ -38,10 +38,8 @@
   }
 
   @include breakpoint($bp-xl) {
-    @include clearfix;
-    margin: 0 auto;
-    max-width: $bp-xl;
-    padding: 0 $grid-padding;
+    margin: 0;
+    float: left;
     // TODO: The 30px & 60px values below should probably be driven by a variable.
     .paragraphs,
     .list {
