@@ -11,6 +11,7 @@
   }
 
   @include breakpoint($bp-xl) {
+    @include font-smoothing("on");
     margin: 0;
     // Half the available space,
     // minus half the date marker width,
