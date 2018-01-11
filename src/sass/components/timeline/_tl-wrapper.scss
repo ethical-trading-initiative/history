@@ -22,4 +22,10 @@
       $stripe-color-3 ($stripe-height*2)+$offset,
       $stripe-color-3 ($stripe-height*3)+$offset
   );
+
+  padding-top: 2em;
+
+  @include breakpoint($bp-xl) {
+    padding-top: 4em;
+  }
 }

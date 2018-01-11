@@ -1,0 +1,23 @@
+.tl-entries {
+  position: relative;
+
+  &::before {
+    // Vertical line
+    content: '';
+    position: absolute;
+    top: 0;
+    left: $grid-padding + ($marker-width--small / 2) - ($tl-line-width/2);
+    height: 100%;
+    width: $tl-line-width;
+    background-color: rgba(white, 0.6);
+    z-index: 0;
+  }
+
+  @include breakpoint($bp-xl) {
+    &::before {
+      // Vertical line
+      left: 50%;
+      margin-left: -($tl-line-width/2);
+    }
+  }
+}

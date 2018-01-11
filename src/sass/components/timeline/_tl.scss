@@ -1,33 +1,8 @@
 .tl {
-  position: relative;
   margin: 0 auto;
   max-width: 760px;
 
-  &::before {
-    // This is the vertical line.
-    content: '';
-    position: absolute;
-    top: 0;
-    left: $grid-padding + ($marker-width--small / 2) - ($tl-line-width/2);
-    height: 100%;
-    width: $tl-line-width;
-    background-color: rgba(white, 0.6);
-    z-index: 0;
-  }
-
   @include breakpoint($bp-xl) {
     max-width: $bp-xl;
-    &::before {
-      // This is the vertical line.
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      height: 100%;
-      width: $tl-line-width;
-      margin-left: -($tl-line-width/2);
-      background-color: rgba(white, 0.6);
-      z-index: 0;
-    }
   }
 }

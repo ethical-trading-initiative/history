@@ -1,6 +1,22 @@
 .tl-intro {
-  color: white;
+  margin: 0 auto;
+  padding: 0 $grid-padding;
+}
+
+.tl-intro__inner {
+  padding: rem-scale(1);
+  background-color: white;
+  font-family: $f-secondary;
   & > *:last-child {
     margin-bottom: 0;
+  }
+}
+
+@include breakpoint($bp-xl) {
+  .tl-intro {
+    max-width: 720px;
+  }
+  .tl-intro__inner {
+    padding: rem-scale(2);
   }
 }

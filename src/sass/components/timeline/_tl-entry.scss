@@ -1,20 +1,13 @@
 .tl-entry {
   position: relative;
-  margin: 0 auto;
-  padding-top: 2em;
-  &:first-child {
-    margin-top: 0;
-  }
+  margin: 2em auto;
   .tl-entry-initial {
     @include clearfix;
     margin: 0 auto;
   }
 
   @include breakpoint($bp-xl) {
-    margin-top: 4em;
-    &:first-child {
-      margin-top: 0;
-    }
+    margin: 4em auto;
     .tl-entry-initial {
       padding: 0 $grid-padding;
     }
