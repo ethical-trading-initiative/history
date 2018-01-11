@@ -1,4 +1,6 @@
-// Animated transitions as entries become "active".
+// Animated transitions as entries become "active"
+// -----------------------------------------------------------------------------
+
 .cssanimations.no-touchevents .tl-entry {
   .tl-entry-card,
   .tl-entry-pullquote,
@@ -43,7 +45,7 @@
   }
 }
 
-// Continued entry card text visibility
+// Toggle concealed entry content
 // -----------------------------------------------------------------------------
 
 .js {
@@ -81,31 +83,3 @@
     }
   }
 }
-
-// Entry list visibility
-// -----------------------------------------------------------------------------
-
-.js {
-  // .tl-entry-list {
-  //   @include element-invisible;
-  // }
-  // &.cssanimations {
-  //   .tl-entry-list {
-  //     transition: all 0.2s ease-out;
-  //     transform: translate3d(0, 50px, 0);
-  //   }
-  // }
-}
-
-// .tl-entry.expanded {
-//   .tl-entry-list {
-//     @include element-visible;
-//   }
-// }
-// .cssanimations {
-//   .tl-entry.expanded {
-//     .tl-entry-list {
-//       transform: translate3d(0, 0, 0);
-//     }
-//   }
-// }
