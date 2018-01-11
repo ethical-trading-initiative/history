@@ -43,16 +43,6 @@
     padding: rem-scale(2);
   }
 
-  .card__body-continued {
-    // Visibility
-    .js & {
-      @include element-invisible;
-    }
-    .tl-entry.expanded & {
-      @include element-visible;
-    }
-  }
-
   .btn-wrapper {
     text-align: center;
   }

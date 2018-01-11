@@ -11,15 +11,6 @@
       margin-top: 0;
     }
   }
-
-  // Visibility
-  .js & {
-    @include element-invisible;
-  }
-  .tl-entry.expanded & {
-    @include element-visible;
-  }
-
 }
 
 @include breakpoint($bp-xl) {
