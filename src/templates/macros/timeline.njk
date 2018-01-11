@@ -29,7 +29,7 @@
 
           <p>{{ intro | safe }}</p>
 
-          <div class="paragraphs">
+          <div class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
           </div>
 
@@ -67,7 +67,7 @@
       {% endif %}
 
       {% if list %}
-      <ul class="list">
+      <ul class="tl-entry-list">
         {% for item in list %}
         <li>{{ item }}</li>
         {% endfor %}

@@ -1,15 +1,4 @@
-.paragraphs,
-.list {
-  // Visibility
-  .js & {
-    @include element-invisible;
-  }
-  .tl-entry.expanded & {
-    @include element-visible;
-  }
-}
-
-.list {
+.tl-entry-list {
   $connection-width--small: 28px;
   margin: 2em $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
   font-family: $f-secondary;
@@ -22,11 +11,20 @@
       margin-top: 0;
     }
   }
+
+  // Visibility
+  .js & {
+    @include element-invisible;
+  }
+  .tl-entry.expanded & {
+    @include element-visible;
+  }
+
 }
 
 @include breakpoint($bp-xl) {
   // TODO: The 30px & 60px values below should probably be driven by a variable.
-  .list {
+  .tl-entry-list {
     width: calc(50% - 30px - 30px);
     margin: 0 0 0 60px;
     padding: 2em;
@@ -34,7 +32,7 @@
   }
 
   .tl-entry:nth-child(even) {
-    .list {
+    .tl-entry-list {
       float: left;
       margin: 0 60px 0 0;
     }
