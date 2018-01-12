@@ -1,13 +1,15 @@
 .tl-entry {
   position: relative;
-  margin: 2em auto;
+  margin: 0 auto;
+  padding: 2em 0;
+  border-bottom: 2px dotted rgba(white, 0.5);
   .tl-entry-initial {
     @include clearfix;
     margin: 0 auto;
   }
 
   @include breakpoint($bp-xl) {
-    margin: 4em auto;
+    padding: 4em 0;
     .tl-entry-initial {
       padding: 0 $grid-padding*2;
     }
