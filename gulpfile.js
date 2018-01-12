@@ -306,6 +306,9 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./src/robots.txt')
     .pipe(gulp.dest('./dist'));
 
+  gulp.src('./src/manifest.json')
+    .pipe(gulp.dest('./dist'));
+
 });
 
 gulp.task('gallery-images', function () {
