@@ -1,0 +1,23 @@
+.page-footer {
+  background-color: $c-grey-d1;
+  color: white;
+  padding: 2em $grid-padding;
+  h1, h2, h3, h4, h5, h6 {
+    color: $c-grey-l1;
+  }
+}
+
+.page-footer__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@include breakpoint($bp-xl) {
+  .page-footer {
+    padding: 4em $grid-padding*2;
+  }
+
+  .page-footer__inner {
+    max-width: 100em; // 1600px
+  }
+}
