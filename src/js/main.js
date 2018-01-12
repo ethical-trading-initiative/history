@@ -21,14 +21,6 @@ jQuery(document).ready(function($) {
     .addTo(controller);
   }
 
-  // Image & video galleries
-  // ---------------------------------------------------------------------------
-
-  // $("[data-fancybox]").fancybox({
-  //   loop: true,
-  //   buttons: ['close']
-  // });
-
   // Toggle entry body content
   // ---------------------------------------------------------------------------
 
@@ -49,5 +41,13 @@ jQuery(document).ready(function($) {
   // Debug: force all entries to be expanded by default
   // (btn labels aren't updated correctly).
   // toggleEntryBody( $(".tl-entry") );
+
+  // Image & video galleries
+  // ---------------------------------------------------------------------------
+
+  // $("[data-fancybox]").fancybox({
+  //   loop: true,
+  //   buttons: ['close']
+  // });
 
 });
