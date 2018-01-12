@@ -1,7 +1,6 @@
 .page-header {
-  $bg-color: $c-grey-d1;
   text-align: center;
-  background-color: $bg-color;
+  background-color: $c-grey-d1;
   padding: $space--large;
   display: flex;
   flex-direction: column;
@@ -9,18 +8,22 @@
   position: relative;
   z-index: 20;
   box-shadow: 0 4px 2px 4px rgba(black, 0.05);
+}
 
-  h1 {
-    flex: 0 1 auto;
-    color: white;
-    margin: 0;
+.page-header__logo {
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 400px;
   }
+}
 
-  @include breakpoint($bp-med) {
+@include breakpoint($bp-med) {
+  .page-header {
     @include padding($space--large*2 null);
-     h1 {
-       margin: 0;
-     }
   }
-
+  .page-header__logo img {
+    width: 50vw;
+    max-width: 600px;
+  }
 }
