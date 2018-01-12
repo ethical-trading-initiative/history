@@ -1,16 +1,18 @@
 .tl-entry-marker {
   @include size($marker-width--small);
   position: absolute;
-  top: 2em;
+  top: calc(2em + 2px);
   left: $grid-padding;
   z-index: 10;
   border-radius: 100%;
-  background-color: $c-brand-pale-yellow;
+  border: 4px solid $c-brand-pale-yellow;
+  background-color: white;
 
   @include breakpoint($bp-xl) {
     @include size($marker-width--large);
-    top: 4em;
+    top: calc(4em + 2px);
     left: 50%;
     margin-left: 0 - ($marker-width--large/2);
+    border-width: 8px;
   }
 }
