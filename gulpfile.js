@@ -291,7 +291,7 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/@ethical-trading-initiative/base-sass/dist/css/reset.css')
     .pipe(gulp.dest('./dist/vendor/@ethical-trading-initiative/base-sass'));
 
-  gulp.src('./node_modules/jquery/dist/jquery.min.js')
+  gulp.src('./node_modules/jquery/dist/jquery.slim.min.js')
     .pipe(gulp.dest('./dist/vendor/jquery'));
 
   gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
