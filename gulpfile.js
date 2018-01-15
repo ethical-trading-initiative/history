@@ -343,15 +343,15 @@ gulp.task('entry-lead-images', function () {
         {
           rename: { suffix: '-442w' },
           width: 442,
-          quality: 100
+          quality: 85
         },{
           rename: { suffix: '-682w' },
           width: 682,
-          quality: 100
+          quality: 85
         },{
           rename: { suffix: '-710w' },
           width: 710,
-          quality: 100
+          quality: 85
         }
       ]}, {
       // Global configuration for all images
