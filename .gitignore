@@ -1,6 +1,2 @@
 /dist
-# TODO: Keeping bitmap images out of version control for now.
-/src/images/bitmap/gallery-items/**/*
-# TODO: Bar this one so that tests don't fail.
-!/src/images/bitmap/gallery-items/chicken.jpeg
 /node_modules
