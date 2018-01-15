@@ -294,8 +294,8 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/jquery/dist/jquery.slim.min.js')
     .pipe(gulp.dest('./dist/vendor/jquery'));
 
-  gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
-    .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
+  // gulp.src('./node_modules/@fancyapps/fancybox/dist/**/*.min.*')
+  //   .pipe(gulp.dest('./dist/vendor/@fancyapps/fancybox'));
 
   gulp.src('./node_modules/scrollmagic/scrollmagic/minified/**/*.min.*')
     .pipe(gulp.dest('./dist/vendor/scrollmagic'));
