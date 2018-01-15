@@ -35,7 +35,7 @@ gulp.task('default', ['watch']);
 
 gulp.task('build', [
   'imagemin',
-  'gallery-images',
+  // 'gallery-images',
   'entry-lead-images',
   // 'imagemin:sprite',
   'svg-sprite',
