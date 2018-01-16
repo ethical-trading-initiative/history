@@ -32,11 +32,9 @@
           </div>
 
           {% if furtherCopy %}
-
           <div class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
           </div>
-
           {% endif %}
 
         </div>
@@ -53,13 +51,11 @@
 
       {% if list %}
       <div class="tl-entry-list">
-
         <ul>
           {% for item in list %}
           <li>{{ item }}</li>
           {% endfor %}
         </ul>
-
       </div>
       {% endif %}
 
