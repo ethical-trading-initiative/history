@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
     var $entry = $(this);
     var ariaControls = [];
 
-    // Added aria attributes & button markup where relevant.
+    // Added aria-expanded attribute & button markup where relevant.
     $entry.find(".card__body-continued").attr('aria-expanded', false).after(btnMarkup);
     $entry.find(".tl-entry-list").attr('aria-expanded', false).append(btnMarkup);
 
@@ -59,6 +59,7 @@ jQuery(document).ready(function($) {
   function toggleEntryBody($entry) {
 
     var $btns = $entry.find(".read-more");
+
     $entry.toggleClass("expanded");
 
     // Toggle content
