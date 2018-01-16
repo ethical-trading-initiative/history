@@ -1,5 +1,3 @@
 /aws.json
 /dist
-# TODO: Keeping bitmap images out of version control for now.
-/src/images/bitmap/gallery-items/**/*
 /node_modules
