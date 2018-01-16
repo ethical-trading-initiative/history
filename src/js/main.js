@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 
   var btnMarkup =
     '<div class="btn-wrapper">' +
-      '<button class="read-more" type="button">Read more</button>' +
+      '<button class="read-more" aria-expanded="false" type="button">Read more</button>' +
     '</div>';
 
   $entries = $(".tl-entry");
@@ -48,9 +48,11 @@ jQuery(document).ready(function($) {
     $entry.toggleClass("expanded");
     $btns.each(function() {
       $btn = $(this);
-      if ($btn.text() === "Read more") {
+      if ($btn.attr('aria-expanded') == 'false') {
+        $btn.attr('aria-expanded', true);
         $btn.text("Read less");
       } else {
+        $btn.attr('aria-expanded', false);
         $btn.text("Read more");
       }
     });
