@@ -13,6 +13,10 @@
     &:first-child {
       margin-top: 0;
     }
+    a {
+      @include link-colors($c-brand-purple);
+      text-decoration: underline;
+    }
   }
   .btn-wrapper {
     margin-top: 2em;
