@@ -35,7 +35,6 @@
             {% include "../entries/" + year + ".njk" %}
           </div>
 
-          {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
           <div class="btn-wrapper">
             <button type="button" class="btn read-more">Read more</button>
           </div>
@@ -56,15 +55,17 @@
 
       {% if list %}
       <div class="tl-entry-list">
+
         <ul>
           {% for item in list %}
           <li>{{ item }}</li>
           {% endfor %}
         </ul>
-        {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
+
         <div class="btn-wrapper">
           <button type="button" class="btn read-more">Read more</button>
         </div>
+        
       </div>
       {% endif %}
 
