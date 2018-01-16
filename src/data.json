@@ -9,37 +9,11 @@
         "Our five pioneering company members are ASDA, Premier Brands, The Body Shop, Littlewoods and Sainsbury's. By the end of the year they are joined by seven others.",
         "Oxfam, Christian Aid and the Fairtrade Foundation are amongst our founding NGO members.",
         "The Trades Union Congress (TUC), the International Confederation of Free Trade Unions (now ITUC), the International Union of Foodworkers (IUF) and the International Textile, Garment and Leather Workers' Federation (now IndustriALL Global Union) are our first trade union members."
-      ],
-      "media": [
-        {
-          "label": "Gallery image 1",
-          "img_id": "mountains"
-        },
-        {
-          "label": "Gallery image 2",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "chicken",
-          "video_url": "https://www.youtube.com/watch?v=me5ifeBFaFo&index=1&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
       ]
     },
     {
       "year": "1999",
-      "intro": "We develop training courses that give practical and theoretical guidance on ethical trade and agree three pilot programmes in members’ supply chains – in China, South Africa, and Zambia and Zimbabwe…",
-      "media": [
-        {
-          "label": "Gallery image",
-          "img_id": "pineapples"
-        },
-        {
-          "label": "Gallery video",
-          "img_id": "beach",
-          "video_url": "https://www.youtube.com/watch?v=dn0Cn7CBezU&index=7&list=LLnOE3_posiF41jdLLh1OSSQ"
-        }
-      ]
+      "intro": "We develop training courses that give practical and theoretical guidance on ethical trade and agree three pilot programmes in members’ supply chains – in China, South Africa, and Zambia and Zimbabwe…"
     },
     {
       "year": "2000",
