@@ -1,6 +1,6 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', list='', media={} ) -%}
+{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', list='' ) -%}
 
   <div class="tl-entry tl-entry-{{ uid }}">
 
@@ -32,22 +32,6 @@
           <div class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
           </div>
-
-          {# {% if media %}
-          <ul class="tl-entry-gallery">
-            {% for item in media %}
-            <li class="gallery-item">
-              {{ gallery.gallery_item(
-                label       = item.label,
-                gallery_uid = uid,
-                img_id      = item.img_id,
-                video_url   = item.video_url
-                )
-              }}
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %} #}
 
           {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
           <div class="btn-wrapper">
