@@ -44,37 +44,3 @@
     }
   }
 }
-
-// Toggle concealed entry content
-// -----------------------------------------------------------------------------
-
-.js {
-  // Basic accessible hide if JS is enabled
-  .card__body-continued,
-  .tl-entry-list {
-    @include element-invisible;
-  }
-  // Animate if browser support & device power is there
-  &.cssanimations.no-touchevents {
-    .tl-entry-list {
-      transition: all 0.5s ease-out;
-      transform: translate3d(0, 50px, 0);
-    }
-  }
-}
-
-.tl-entry.expanded {
-  // Basic accessible show if JS is enabled (.expanded is added by JS)
-  .card__body-continued,
-  .tl-entry-list {
-    @include element-visible;
-  }
-}
-// Animate if browser support & device power is there
-.cssanimations.no-touchevents {
-  .tl-entry.expanded {
-    .tl-entry-list {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-}

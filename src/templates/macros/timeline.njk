@@ -32,7 +32,7 @@
           </div>
 
           {% if furtherCopy %}
-          <div class="card__body-continued">
+          <div id="card__body-continued-{{ uid }}" class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
           </div>
           {% endif %}
@@ -50,7 +50,7 @@
       {% endif %}
 
       {% if list %}
-      <div class="tl-entry-list">
+      <div id="tl-entry-list-{{ uid }}" class="tl-entry-list">
         <ul>
           {% for item in list %}
           <li>{{ item }}</li>

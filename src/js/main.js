@@ -33,19 +33,42 @@ jQuery(document).ready(function($) {
       '<button class="read-more" aria-expanded="false" type="button">Read more</button>' +
     '</div>';
 
-  $entries = $(".tl-entry");
+  var $entries = $(".tl-entry");
 
-  $entries.each(function() {
-    $entry = $(this);
-    $entry.find(".card__body-continued").after(btnMarkup);
-    $entry.find(".tl-entry-list").append(btnMarkup);
+  $entries.each(function(i) {
+    var $entry = $(this);
+    var ariaControls = [];
+
+    // Added aria attributes & button markup where relevant.
+    $entry.find(".card__body-continued").attr('aria-expanded', false).after(btnMarkup);
+    $entry.find(".tl-entry-list").attr('aria-expanded', false).append(btnMarkup);
+
+    // Add correct aria-controls attribute where relevant.
+    if ($entry.find(".card__body-continued").length > 0) {
+      ariaControls.push('card__body-continued-' + i);
+    }
+    if ($entry.find(".tl-entry-list").length > 0) {
+      ariaControls.push('tl-entry-list-' + i);
+    }
+    $entry.find(".read-more").attr('aria-controls', ariaControls.join(' '));
+
   });
 
   // Toggle functionality
 
   function toggleEntryBody($entry) {
+
     var $btns = $entry.find(".read-more");
     $entry.toggleClass("expanded");
+
+    // Toggle content
+    if ($entry.hasClass("expanded")) {
+      $entry.find(".card__body-continued, .tl-entry-list").attr('aria-expanded', true);
+    } else {
+      $entry.find(".card__body-continued, .tl-entry-list").attr('aria-expanded', false);
+    }
+
+    // Toggle buttons
     $btns.each(function() {
       $btn = $(this);
       if ($btn.attr('aria-expanded') == 'false') {
@@ -56,6 +79,7 @@ jQuery(document).ready(function($) {
         $btn.text("Read more");
       }
     });
+
   }
 
   $( ".read-more" ).on( "click", function() {
