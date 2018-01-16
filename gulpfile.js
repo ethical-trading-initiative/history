@@ -6,6 +6,7 @@ var filter = require('gulp-filter');
 var flatten = require('gulp-flatten');
 var fs = require('fs');
 var gulp = require('gulp');
+var gzip = require("gulp-gzip");
 var imagemin = require('gulp-imagemin');
 var modernizr = require('gulp-modernizr');
 var nunjucksRender = require('gulp-nunjucks-render');
@@ -13,6 +14,7 @@ var postcss = require('gulp-postcss');
 var realFavicon = require ('gulp-real-favicon');
 var replace = require('gulp-replace');
 var responsive = require('gulp-responsive');
+var s3 = require("gulp-s3-publish");
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
@@ -51,6 +53,14 @@ gulp.task('init', [
 
 // Tasks
 // -----------------------------------------------------------------------------
+
+gulp.task('deploy', function () {
+  var aws = JSON.parse(fs.readFileSync('./aws.json'));
+  var options = { gzippedOnly: true };
+  return gulp.src(['./dist/**/*','!**/*.map'])
+    .pipe(gzip())
+    .pipe(s3(aws, options));
+});
 
 gulp.task('watch', function () {
 
