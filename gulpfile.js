@@ -57,7 +57,7 @@ gulp.task('init', [
 gulp.task('deploy', function () {
   var aws = JSON.parse(fs.readFileSync('./aws.json'));
   var options = { gzippedOnly: true };
-  gulp.src(['./dist/**/*','!**/*.map'])
+  return gulp.src(['./dist/**/*','!**/*.map'])
     .pipe(gzip())
     .pipe(s3(aws, options));
 });
