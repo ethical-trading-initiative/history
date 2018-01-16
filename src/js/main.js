@@ -7,8 +7,10 @@ jQuery(document).ready(function($) {
   var controller = new ScrollMagic.Controller(
     // {addIndicators: true}
   );
+
+  // TODO: Parse data.json for this value
   // Mumber of timeline entries in the DOM
-  var entryCount = 11;
+  var entryCount = 21;
 
   for (var i=0; i<=entryCount; i++) {
     var entry = ".tl-entry-" + i;
