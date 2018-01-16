@@ -23,8 +23,25 @@ jQuery(document).ready(function($) {
     .addTo(controller);
   }
 
-  // Toggle entry body content
+  // Toggle expanded entry content
   // ---------------------------------------------------------------------------
+
+  // Initialise toggled content
+
+  var btnMarkup =
+    '<div class="btn-wrapper">' +
+      '<button class="read-more" type="button">Read more</button>' +
+    '</div>';
+
+  $entries = $(".tl-entry");
+
+  $entries.each(function() {
+    $entry = $(this);
+    $entry.find(".card__body-continued").after(btnMarkup);
+    $entry.find(".tl-entry-list").append(btnMarkup);
+  });
+
+  // Toggle functionality
 
   function toggleEntryBody($entry) {
     var $btns = $entry.find(".read-more");

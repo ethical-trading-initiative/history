@@ -27,16 +27,14 @@
 
         <div class="card__body">
 
-          <p>{{ intro | safe }}</p>
+          <div class="card__body__intro">
+            <p>{{ intro | safe }}</p>
+          </div>
 
           {% if furtherCopy %}
 
           <div class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
-          </div>
-
-          <div class="btn-wrapper">
-            <button class="read-more" type="button">Read more</button>
           </div>
 
           {% endif %}
@@ -61,10 +59,6 @@
           <li>{{ item }}</li>
           {% endfor %}
         </ul>
-
-        <div class="btn-wrapper">
-          <button class="read-more" type="button">Read more</button>
-        </div>
 
       </div>
       {% endif %}
