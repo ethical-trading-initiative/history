@@ -53,7 +53,7 @@
       <div id="tl-entry-list-{{ uid }}" class="tl-entry-list">
         <ul>
           {% for item in list %}
-          <li>{{ item }}</li>
+          <li>{{ item | safe }}</li>
           {% endfor %}
         </ul>
       </div>
