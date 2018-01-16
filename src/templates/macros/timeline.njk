@@ -1,6 +1,6 @@
 {% import "macros/gallery.njk" as gallery %}
 
-{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', list='' ) -%}
+{% macro entry( uid='', year='', intro='', body='', blockquote='', cite='', list='', furtherCopy=true ) -%}
 
   <div class="tl-entry tl-entry-{{ uid }}">
 
@@ -29,6 +29,8 @@
 
           <p>{{ intro | safe }}</p>
 
+          {% if furtherCopy %}
+
           <div class="card__body-continued">
             {% include "../entries/" + year + ".njk" %}
           </div>
@@ -37,6 +39,8 @@
           <div class="btn-wrapper">
             <a href="#" class="btn read-more">Read more</a>
           </div>
+
+          {% endif %}
 
         </div>
 
