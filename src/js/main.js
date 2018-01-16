@@ -27,13 +27,16 @@ jQuery(document).ready(function($) {
   // ---------------------------------------------------------------------------
 
   function toggleEntryBody($entry) {
-    var $btn = $entry.find(".read-more");
+    var $btns = $entry.find(".read-more");
     $entry.toggleClass("expanded");
-    if ($btn.text() === "Read more") {
-      $btn.text("Read less");
-    } else {
-      $btn.text("Read more");
-    }
+    $btns.each(function() {
+      $btn = $(this);
+      if ($btn.text() === "Read more") {
+        $btn.text("Read less");
+      } else {
+        $btn.text("Read more");
+      }
+    });
   }
 
   $( ".read-more" ).on( "click", function() {

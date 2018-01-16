@@ -55,11 +55,17 @@
       {% endif %}
 
       {% if list %}
-      <ul class="tl-entry-list">
-        {% for item in list %}
-        <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
+      <div class="tl-entry-list">
+        <ul>
+          {% for item in list %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {# TODO: Instruct screen readers to ignore this (the body text will already be available). #}
+        <div class="btn-wrapper">
+          <a href="#" class="btn read-more">Read more</a>
+        </div>
+      </div>
       {% endif %}
 
     </div>

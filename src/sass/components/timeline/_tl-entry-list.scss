@@ -1,15 +1,21 @@
 .tl-entry-list {
   $connection-width--small: 28px;
   margin: 2em $grid-padding 0 ($grid-padding + $marker-width--small + $connection-width--small);
-  font-family: $f-secondary;
-  background-color: lighten($c-brand-bright-yellow, 35%);
-  color: $c-brand-burgundy;
-  padding: rem-scale(2);
+  ul {
+    margin: 0;
+    padding: rem-scale(2);
+    background-color: lighten($c-brand-bright-yellow, 35%);
+    font-family: $f-secondary;
+    color: $c-brand-burgundy;
+  }
   li {
     margin: 1rem 0 0 1rem;
     &:first-child {
       margin-top: 0;
     }
+  }
+  .btn-wrapper {
+    margin-top: 2em;
   }
 }
 
@@ -18,8 +24,10 @@
   .tl-entry-list {
     width: calc(50% - 30px - 30px);
     margin: 0 0 0 60px;
-    padding: 2em;
     float: right;
+    ul {
+      padding: 2em;
+    }
   }
 
   .tl-entry:nth-child(even) {

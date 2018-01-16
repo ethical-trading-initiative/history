@@ -9,6 +9,13 @@
     @include clearfix;
     margin: 0 auto;
   }
+  .btn-wrapper {
+    text-align: center;
+  }
+  .read-more {
+    @include btn-base;
+    @include btn-colors(white, $c-brand-purple);
+  }
 
   @include breakpoint($bp-xl) {
     border-bottom: 2px dotted rgba(white, 0.5);
