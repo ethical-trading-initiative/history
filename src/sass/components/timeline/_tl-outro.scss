@@ -1,0 +1,12 @@
+.tl-outro {
+  margin-bottom: 2em;
+  text-align: center;
+  .btn {
+    @include btn-base;
+    @include btn-colors(white, $c-brand-purple);
+  }
+
+  @include breakpoint($bp-xl) {
+    margin-bottom: 4em;
+  }
+}
