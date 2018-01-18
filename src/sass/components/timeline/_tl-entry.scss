@@ -6,11 +6,7 @@
     @include clearfix;
     margin: 0 auto;
   }
-  .btn-wrapper {
-    text-align: center;
-  }
   .read-more {
-    @include btn-base;
     @include btn-colors(white, $c-brand-purple);
   }
 

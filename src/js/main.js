@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
 
   var btnMarkup =
     '<div class="btn-wrapper">' +
-      '<button class="read-more" aria-expanded="false" type="button">Read more</button>' +
+      '<button class="btn read-more" aria-expanded="false" type="button">Read more</button>' +
     '</div>';
 
   var $entries = $(".tl-entry");

@@ -1,15 +1,13 @@
 .tl-intro {
-  .pane__inner {
-    font-family: $f-secondary;
-    p:first-child:first-letter {
-      @include font-smoothing("on");
-      float: left;
-      color: $c-brand-stone;
-      font-weight: bold;
-      font-size: rem-scale(6);
-      padding-top: 4px;
-      padding-right: 4px;
-      line-height: 0.7; // For Chrome's benefit.
-    }
+  font-family: $f-secondary;
+  p:first-child:first-letter {
+    @include font-smoothing("on");
+    float: left;
+    color: $c-brand-stone;
+    font-weight: bold;
+    font-size: rem-scale(6);
+    padding-top: 4px;
+    padding-right: 4px;
+    line-height: 0.7; // For Chrome's benefit.
   }
 }

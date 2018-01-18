@@ -1,8 +1,8 @@
 .tl-outro {
   margin-bottom: 2em;
+  font-family: $f-secondary;
   text-align: center;
   .btn {
-    @include btn-base;
     @include btn-colors(white, $c-brand-purple);
   }
 
