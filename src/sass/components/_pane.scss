@@ -1,0 +1,21 @@
+.pane {
+  margin: 0 auto;
+  padding: 0 $grid-padding;
+}
+
+.pane__inner {
+  background-color: white;
+  padding: rem-scale(1);
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include breakpoint($bp-xl) {
+  .pane {
+    max-width: 700px;
+  }
+  .pane__inner {
+    padding: 2em;
+  }
+}

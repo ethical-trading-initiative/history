@@ -1,32 +1,15 @@
 .tl-intro {
-  margin: 0 auto;
-  padding: 0 $grid-padding;
-}
-
-.tl-intro__inner {
-  padding: rem-scale(1);
-  background-color: white;
-  font-family: $f-secondary;
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-  p:first-child:first-letter {
-    @include font-smoothing("on");
-    float: left;
-    color: $c-brand-stone;
-    font-weight: bold;
-    font-size: rem-scale(6);
-    padding-top: 4px;
-    padding-right: 4px;
-    line-height: 0.7; // For Chrome's benefit.
-  }
-}
-
-@include breakpoint($bp-xl) {
-  .tl-intro {
-    max-width: 700px;
-  }
-  .tl-intro__inner {
-    padding: 2em;
+  .pane__inner {
+    font-family: $f-secondary;
+    p:first-child:first-letter {
+      @include font-smoothing("on");
+      float: left;
+      color: $c-brand-stone;
+      font-weight: bold;
+      font-size: rem-scale(6);
+      padding-top: 4px;
+      padding-right: 4px;
+      line-height: 0.7; // For Chrome's benefit.
+    }
   }
 }
