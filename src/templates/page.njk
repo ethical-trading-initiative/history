@@ -1,0 +1,17 @@
+{% extends "html.njk" %}
+
+{% block page %}
+
+<div class="viewport">
+
+  {% include "header.njk" %}
+
+  <div class="page-main" role="main">
+    {% block main %}{% endblock %}
+  </div>
+
+  {% include "footer.njk" %}
+
+</div>
+
+{% endblock %}

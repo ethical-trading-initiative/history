@@ -1,59 +1,32 @@
 {% import "macros/timeline.njk" as timeline %}
 
-{% extends "html.njk" %}
+{% extends "page.njk" %}
 
-{% block content %}
+{% block main %}
 
-<div class="viewport">
+<div class="tl">
 
-  <header class="page-header parallax-item fast" role="banner">
-    <div class="page-header__logo">
-      <img src="images/svg/eti-20-years-logo.svg" alt="Ethical Trading Initiative. For works' rights. For better business. For 20 years.">
+  <div class="tl-intro">
+    <div class="tl-intro__inner">
+      <p>The Ethical Trading Initiative was founded in 1998 in response to growing concerns about the poor pay and conditions of workers in many international supply chains. Since then we have helped change the lives of millions of workers by driving improvements in company policies and practices and through campaigning for change.</p>
     </div>
-  </header>
-
-  {# Must be before .tl-wrapper #}
-  {# <div class="debris debris-1 parallax-item slow"></div>
-  <div class="debris debris-2 parallax-item slow"></div>
-  <div class="debris debris-3 parallax-item slow"></div> #}
-
-  <div class="tl-wrapper" role="main">
-
-    <div class="tl">
-
-      <div class="tl-intro">
-        <div class="tl-intro__inner">
-          <p>The Ethical Trading Initiative was founded in 1998 in response to growing concerns about the poor pay and conditions of workers in many international supply chains. Since then we have helped change the lives of millions of workers by driving improvements in company policies and practices and through campaigning for change.</p>
-        </div>
-      </div>
-
-      <div class="tl-entries">
-
-        {% for entry in entries %}
-        {{ timeline.entry(
-          uid         = loop.index0,
-          year        = entry.year,
-          intro       = entry.intro,
-          body        = entry.body,
-          blockquote  = entry.blockquote,
-          cite        = entry.cite,
-          list        = entry.list,
-          furtherCopy = entry.furtherCopy
-        )}}
-        {% endfor %}
-
-      </div>
-
-    </div>
-
   </div>
 
-  <div class="page-footer" role="contentinfo">
-    <div class="page-footer__inner">
-      <h2>Footer</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus risus lectus, lacinia eget tempus a, malesuada et odio. Nulla adipiscing convallis volutpat. Praesent varius magna sed orci commodo posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      <p>Vivamus risus lectus, lacinia eget tempus a malesuada et odio.</p>
-    </div>
+  <div class="tl-entries">
+
+    {% for entry in entries %}
+    {{ timeline.entry(
+      uid         = loop.index0,
+      year        = entry.year,
+      intro       = entry.intro,
+      body        = entry.body,
+      blockquote  = entry.blockquote,
+      cite        = entry.cite,
+      list        = entry.list,
+      furtherCopy = entry.furtherCopy
+    )}}
+    {% endfor %}
+
   </div>
 
 </div>
