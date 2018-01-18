@@ -1,0 +1,35 @@
+// Layout
+// -----------------------------------------------------------------------------
+
+// Ensure footer sticks to bottom of viewport on short pages.
+html {
+  height: 100%
+}
+body {
+  // Layout
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+}
+.viewport {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.page-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+// Appearance
+// -----------------------------------------------------------------------------
+
+body {
+  background: white url(../images/bitmap/body-bg/fishermen.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  // Prevents this element from noticeably resizing as entries animate in.
+  overflow-y: hidden;
+}
