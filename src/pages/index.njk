@@ -1,4 +1,5 @@
 {% import "macros/timeline.njk" as timeline %}
+{% import "macros/sprite.njk" as svg %}
 
 {% extends "page.njk" %}
 
@@ -32,8 +33,15 @@
   <div class="pane tl-outro">
     <div class="pane__inner">
       <p>Stay up to date with ETI:<p/>
-      <p><a class="btn" href="https://www.ethicaltrade.org/subscribe-email">Subscribe</a></p>
-      <p><a href="https://www.ethicaltrade.org">www.ethicaltrade.org</a></p>
+      <p>
+        <a class="btn" href="https://www.ethicaltrade.org/subscribe-email">
+          {{ svg.use(
+            sprite_id='email',
+            svg_class='btn__icon'
+          )}}
+          <span class="btn__label">Subscribe</span>
+        </a>
+      </p>
     </div>
   </div>
 
