@@ -2,9 +2,6 @@
   position: relative;
   margin: 0 auto;
   padding: 2em 0;
-  &:last-child {
-    border-bottom: none;
-  }
   .tl-entry-initial {
     @include clearfix;
     margin: 0 auto;
@@ -18,8 +15,11 @@
   }
 
   @include breakpoint($bp-xl) {
-    border-bottom: 2px dotted rgba(white, 0.5);
+    border-bottom: 2px dotted rgba(white, 0.3);
     padding: 4em 0;
+    &:last-child {
+      border-bottom: none;
+    }
     .tl-entry-initial {
       padding: 0 $grid-padding*2;
     }
