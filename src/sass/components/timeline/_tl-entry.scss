@@ -1,23 +1,17 @@
 .tl-entry {
+  @include clearfix;
   position: relative;
   margin: 0 auto;
   padding: 2em 0;
-  .tl-entry-initial {
-    @include clearfix;
-    margin: 0 auto;
-  }
   .read-more {
     @include btn-colors(white, $c-brand-purple);
   }
 
   @include breakpoint($bp-xl) {
     border-bottom: 2px dotted rgba(white, 0.3);
-    padding: 4em 0;
+    padding: 4em $grid-padding*2;
     &:last-child {
       border-bottom: none;
-    }
-    .tl-entry-initial {
-      padding: 0 $grid-padding*2;
     }
   }
 }

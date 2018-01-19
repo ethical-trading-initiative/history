@@ -4,62 +4,58 @@
 
   <div class="tl-entry tl-entry-{{ uid }}">
 
-    <div class="tl-entry-initial">
+    <div class="tl-entry-marker"></div>
 
-      <div class="tl-entry-marker"></div>
+    <div class="tl-entry-card">
 
-      <div class="tl-entry-card">
-
-        <div class="card__title">
-          <h2>{{ year }}</h2>
-        </div>
-
-        <div class="card__lead-image">
-          <img  srcset="images/bitmap/entry-lead/{{ year }}-442w.jpg 442w,
-                        images/bitmap/entry-lead/{{ year }}-682w.jpg 682w,
-                        images/bitmap/entry-lead/{{ year }}-710w.jpg 710w"
-                 sizes="(max-width: 520px) 442px,
-                        (max-width: 1199px) 682px,
-                        (min-width: 1200px) 710px,
-                        710px"
-                   src="images/bitmap/entry-lead/{{ year }}-710w.jpg" alt="">
-        </div>
-
-        <div class="card__body">
-
-          <div class="card__body__intro">
-            <p>{{ intro | safe }}</p>
-          </div>
-
-          {% if furtherCopy %}
-          <div id="card__body-continued-{{ uid }}" class="card__body-continued">
-            {% include "../entries/" + year + ".njk" %}
-          </div>
-          {% endif %}
-
-        </div>
-
+      <div class="card__title">
+        <h2>{{ year }}</h2>
       </div>
 
-      {% if blockquote %}
-      <div class="tl-entry-pullquote">
-        <blockquote>{{ blockquote }}
-          <cite>{{ cite }}</cite>
-        </blockquote>
+      <div class="card__lead-image">
+        <img  srcset="images/bitmap/entry-lead/{{ year }}-442w.jpg 442w,
+                      images/bitmap/entry-lead/{{ year }}-682w.jpg 682w,
+                      images/bitmap/entry-lead/{{ year }}-710w.jpg 710w"
+               sizes="(max-width: 520px) 442px,
+                      (max-width: 1199px) 682px,
+                      (min-width: 1200px) 710px,
+                      710px"
+                 src="images/bitmap/entry-lead/{{ year }}-710w.jpg" alt="">
       </div>
-      {% endif %}
 
-      {% if list %}
-      <div id="tl-entry-list-{{ uid }}" class="tl-entry-list">
-        <ul>
-          {% for item in list %}
-          <li>{{ item | safe }}</li>
-          {% endfor %}
-        </ul>
+      <div class="card__body">
+
+        <div class="card__body__intro">
+          <p>{{ intro | safe }}</p>
+        </div>
+
+        {% if furtherCopy %}
+        <div id="card__body-continued-{{ uid }}" class="card__body-continued">
+          {% include "../entries/" + year + ".njk" %}
+        </div>
+        {% endif %}
+
       </div>
-      {% endif %}
 
     </div>
+
+    {% if blockquote %}
+    <div class="tl-entry-pullquote">
+      <blockquote>{{ blockquote }}
+        <cite>{{ cite }}</cite>
+      </blockquote>
+    </div>
+    {% endif %}
+
+    {% if list %}
+    <div id="tl-entry-list-{{ uid }}" class="tl-entry-list">
+      <ul>
+        {% for item in list %}
+        <li>{{ item | safe }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
 
   </div>
 
