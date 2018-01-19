@@ -14,16 +14,18 @@
   text-align: center;
   img {
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
   }
 }
 
-@include breakpoint($bp-med) {
+@include breakpoint($bp-large) {
   .page-header {
     @include padding($space--large*2 null);
   }
-  .page-header__logo img {
-    width: 50vw;
-    max-width: 600px;
+  .page-header__logo {
+    img {
+      width: 50vw;
+      max-width: 600px;
+    }
   }
 }
