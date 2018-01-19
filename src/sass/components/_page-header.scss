@@ -1,21 +1,13 @@
 .page-header {
-  text-align: center;
   background-color: $c-grey-d1;
   padding: $space--large;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 20;
   box-shadow: 0 4px 2px 4px rgba(black, 0.1);
 }
-
 .page-header__logo {
-  text-align: center;
-  img {
-    width: 100%;
-    max-width: 300px;
-  }
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
 }
 
 @include breakpoint($bp-large) {
@@ -23,9 +15,7 @@
     @include padding($space--large*2 null);
   }
   .page-header__logo {
-    img {
-      width: 50vw;
-      max-width: 600px;
-    }
+    width: 50vw;
+    max-width: 600px;
   }
 }
