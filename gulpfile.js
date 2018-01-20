@@ -43,7 +43,7 @@ gulp.task('build', [
   'svg-sprite',
   'sass:prod',
   'js:prod',
-  'nunjucks',
+  'html',
   'modernizr'
 ]);
 
@@ -71,11 +71,11 @@ gulp.task('watch', function () {
 
   gulp.watch('./src/sass/**/*.scss', ['sass:dev']);
   gulp.watch('./src/js/**/*.js', ['js:dev']);
-  gulp.watch('./src/**/*.+(html|nunjucks|njk)', ['nunjucks']);
-  gulp.watch('./src/**/*.json', ['nunjucks']);
+  gulp.watch('./src/**/*.+(html|nunjucks|njk)', ['html']);
+  gulp.watch('./src/**/*.json', ['html']);
 });
 
-gulp.task('nunjucks', function() {
+gulp.task('html', function() {
   gulp.src('src/pages/**/*.+(html|nunjucks|njk)')
     .pipe(data(function() {
         return require('./src/data.json')
