@@ -48,7 +48,8 @@ gulp.task('build', [
 ]);
 
 gulp.task('init', [
-  'copyOtherFilesToDist'
+  'copyOtherFilesToDist',
+  'generate-favicon'
 ]);
 
 // Tasks
@@ -82,6 +83,7 @@ gulp.task('nunjucks', function() {
     .pipe(nunjucksRender({
         path: ['src/templates']
       }))
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
     .pipe(gulp.dest('dist'))
     browserSync.reload();
 });
@@ -262,15 +264,6 @@ gulp.task('generate-favicon', function(done) {
   }, function() {
     done();
   });
-});
-
-// Inject the favicon markups in your HTML pages. You should run
-// this task whenever you modify a page. You can keep this task
-// as is or refactor your existing HTML pipeline.
-gulp.task('inject-favicon-markups', function() {
-	return gulp.src([ 'dist/*.html' ])
-		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-		.pipe(gulp.dest('./dist'));
 });
 
 // Check for updates on RealFaviconGenerator (think: Apple has just
