@@ -313,6 +313,9 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/gsap/ScrollToPlugin.js')
     .pipe(gulp.dest('./dist/vendor/gsap'));
 
+  gulp.src('./node_modules/svgxuse/svgxuse.min.js')
+    .pipe(gulp.dest('./dist/vendor/svgxuse'));
+
   gulp.src('./src/robots.txt')
     .pipe(gulp.dest('./dist'));
 
