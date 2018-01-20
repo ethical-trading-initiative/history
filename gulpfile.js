@@ -22,7 +22,7 @@ var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
 
 // File where the favicon markups are stored
-var FAVICON_DATA_FILE = 'dist/favicons/faviconData.json';
+var FAVICON_DATA_FILE = './dist/favicons/faviconData.json';
 
 var postcssProcessors = [
   require('postcss-will-change')(), // must be before autoprefixer
@@ -197,9 +197,9 @@ gulp.task('modernizr', function() {
 // package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function(done) {
   realFavicon.generateFavicon({
-    masterPicture: 'src/images/png/favicon_source.png',
-    dest: 'dist/favicons',
-    iconsPath: '/',
+    masterPicture: './src/images/bitmap/favicon/favicon_source.png',
+    dest: './dist/favicons',
+    iconsPath: '/favicons',
     design: {
       ios: {
         pictureAspect: 'backgroundAndMargin',
@@ -267,18 +267,10 @@ gulp.task('generate-favicon', function(done) {
 // Inject the favicon markups in your HTML pages. You should run
 // this task whenever you modify a page. You can keep this task
 // as is or refactor your existing HTML pipeline.
-//
-// NOTE: This is a slightly revised task when compared to what is suggested by
-// http://realfavicongenerator.net/favicon/gulp. This task creates a file from
-// scratch and completely overwrites it on subsequent runs.
-// Source: https://goo.gl/PaHp7u
 gulp.task('inject-favicon-markups', function() {
-  require('fs').writeFileSync('templates/system/favicons.html.twig', '');
-  gulp.src([ 'templates/system/favicons.html.twig'])
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
-    .pipe(replace('href="/', 'href="/my-theme/'))
-    .pipe(replace('content="/', 'content="/my-theme/'))
-    .pipe(gulp.dest('templates/system/'));
+	return gulp.src([ 'dist/*.html' ])
+		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+		.pipe(gulp.dest('./dist'));
 });
 
 // Check for updates on RealFaviconGenerator (think: Apple has just
