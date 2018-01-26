@@ -17,6 +17,7 @@ var responsive = require('gulp-responsive');
 var s3 = require("gulp-s3-publish");
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
+var sitemap = require('gulp-sitemap');
 var sourcemaps = require('gulp-sourcemaps');
 var svgSprite = require('gulp-svg-sprite');
 var uglify = require('gulp-uglify');
@@ -44,6 +45,7 @@ gulp.task('build', [
   'sass:prod',
   'js:prod',
   'html',
+  'sitemap',
   'modernizr'
 ]);
 
@@ -86,6 +88,16 @@ gulp.task('html', function() {
     .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
     .pipe(gulp.dest('dist'))
     browserSync.reload();
+});
+
+gulp.task('sitemap', function () {
+  gulp.src(['dist/**/*.html', '!dist/error.html'], {
+      read: false
+    })
+    .pipe(sitemap({
+      siteUrl: 'https://history.ethicaltrade.org'
+    }))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('sass:prod', function () {
