@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
 
-  // ScrollMagic
-  // ---------------------------------------------------------------------------
+  /**
+   * ScrollMagic
+   */
 
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller(
@@ -23,8 +24,9 @@ jQuery(document).ready(function($) {
     .addTo(controller);
   }
 
-  // Toggle expanded entry content
-  // ---------------------------------------------------------------------------
+  /**
+   * Toggle expanded entry content
+   */
 
   // Initialise toggled content
 
@@ -91,8 +93,9 @@ jQuery(document).ready(function($) {
   // (btn labels aren't updated correctly).
   // toggleEntryBody( $(".tl-entry") );
 
-  // Image & video galleries
-  // ---------------------------------------------------------------------------
+  /**
+   * Image & video galleries
+   */
 
   // $("[data-fancybox]").fancybox({
   //   loop: true,
