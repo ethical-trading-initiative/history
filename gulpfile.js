@@ -313,6 +313,9 @@ gulp.task('copyOtherFilesToDist', function() {
   gulp.src('./node_modules/svgxuse/svgxuse.min.js')
     .pipe(gulp.dest('./dist/vendor/svgxuse'));
 
+  gulp.src('./node_modules/cookieconsent/build/**/*.min.*')
+    .pipe(gulp.dest('./dist/vendor/cookieconsent'));
+
   gulp.src('./src/robots.txt')
     .pipe(gulp.dest('./dist'));
 
