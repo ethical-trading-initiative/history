@@ -100,3 +100,62 @@ jQuery(document).ready(function($) {
   // });
 
 });
+
+
+// Self invoking function to avoid polluting the global namespace.
+(function () {
+
+  /**
+   * Opt-in analytics
+   */
+
+  function enableAnalytics() {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('set', 'anonymizeIp', true);
+    ga('create', 'UA-9225247-2', 'auto');
+    ga('send', 'pageview');
+  }
+
+  // https://cookieconsent.insites.com/documentation/javascript-api/
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#333231",
+          "text": "#ffffff",
+          "link": "#EBD66E;"
+        },
+        "button": {
+          "background": "#555199",
+          "text": "#ffffff"
+        }
+      },
+      "position": "bottom",
+      "type": "opt-in",
+      "content": {
+        "link": "Privacy policy",
+        "href": "/privacy.html"
+      },
+      // https://cookieconsent.insites.com/documentation/disabling-cookies/
+      onInitialise: function (status) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        if (type == 'opt-in' && didConsent) {
+          enableAnalytics();
+        }
+      },
+      onStatusChange: function(status, chosenBefore) {
+        var type = this.options.type;
+        var didConsent = this.hasConsented();
+        // Added test of value of `status` here as the example code passed regardless of which button user pressed.
+        if (type == 'opt-in' && didConsent && status == 'allow') {
+          enableAnalytics();
+        }
+      }
+    })
+  });
+
+})();
