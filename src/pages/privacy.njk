@@ -1,0 +1,49 @@
+{% import "macros/timeline.njk" as timeline %}
+
+{% extends "page.njk" %}
+
+{% block main %}
+
+  <div class="pane">
+    <div class="pane__inner">
+      <h1>Privacy policy</h1>
+      <h2>What specific cookies does this website use?</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Cookie</th>
+          <th>Origin</th>
+          <th>Summary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>__cfduid</td>
+          <td>CloudFlare</td>
+          <td>Used to identify individual clients behind a shared IP address and apply security settings on a per-client basis. <a href="https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-Cloudflare-cfduid-cookie-do-">More info</a>.
+          </td>
+        </tr>
+        <tr>
+          <td>_ga</td>
+          <td>Google Analytics</td>
+          <td>Used to distinguish users. <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">More info</a>.
+          </td>
+        </tr>
+        <tr>
+          <td>_gid</td>
+          <td>Google Analytics</td>
+          <td>Used to distinguish users. <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">More info</a>.
+          </td>
+        </tr>
+        <tr>
+          <td>_gat</td>
+          <td>Google Analytics</td>
+          <td>Used to throttle request rate. <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">More info</a>.
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
