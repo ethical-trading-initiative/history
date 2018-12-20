@@ -7,7 +7,7 @@
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 300px;
+  max-width: 220px;
 }
 
 @include breakpoint($bp-large) {
@@ -15,7 +15,7 @@
     @include padding($space--large*2 null);
   }
   .page-header__logo {
-    width: 50vw;
-    max-width: 600px;
+    width: 40vw;
+    max-width: 500px;
   }
 }
