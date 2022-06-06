@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 
   // TODO: Parse data.json for this value
   // Number of timeline entries in the DOM
-  var entryCount = 23;
+  var entryCount = 25;
 
   for (var i=0; i<=entryCount; i++) {
     var entry = ".tl-entry-" + i;
