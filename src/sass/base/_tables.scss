@@ -1,0 +1,64 @@
+// TODO: Move these vars to _colors.scss
+$c-th: $c-grey-d2;
+$c-tr-odd: $c-white;
+$c-tr-even: $c-grey-l5;
+
+table {
+  width: 100%;
+  margin-bottom: $space;
+  font-size: rem-scale(-1);
+}
+
+th {
+  padding: $space $space/2;
+  background: $c-th;
+  color: $c-white;
+  font-weight: normal;
+  &.active {
+    background: darken($c-th, 2%);
+  }
+  a, a.active {
+    color: $c-white;
+    img {
+      margin: 3px 3px 0 $space;
+    }
+  }
+}
+
+tr {
+  background: $c-tr-odd;
+  &.odd {
+    background: $c-tr-odd;
+  }
+  &.even,
+  &:nth-child(even) {
+    background: $c-tr-even;
+  }
+}
+
+td {
+  padding: $space $space/2;
+}
+
+tr.odd td.active {
+  background: darken($c-tr-odd, 2%);
+}
+tr.even td.active {
+  background: darken($c-tr-even, 2%);
+}
+
+caption {
+  @include h4;
+}
+
+@include breakpoint($bp-small) {
+  table {
+    font-size: rem-scale(0);
+  }
+  th {
+    padding: $space*2 $space;
+  }
+  td {
+    padding: $space;
+  }
+}

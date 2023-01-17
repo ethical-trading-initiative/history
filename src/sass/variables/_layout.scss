@@ -1,3 +1,36 @@
+// Modular Scale
+// -----------------------------------------------------------------------------
+
+// Scale in use:
+// http://www.modularscale.com/?14&px&1.25&sass&text
+
+// Bourbon preset scale vars:
+// https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/functions/_modular-scale.scss
+
+$modular-scale-base: 16px;
+$modular-scale-ratio: $major-third; // 1.25 = 4:5 = major third
+
+// Spacing
+// -----------------------------------------------------------------------------
+
+$space: 10px;
+$space--neg: -10px;
+$space--large: $space * 4;
+$grid-padding: 1.25em; // 20px
+
+// Breakpoints
+// -----------------------------------------------------------------------------
+
+// Major breakpoints
+
+$bp-small:  32.5em; // 520px
+$bp-med:    48em;   // 768px
+$bp-large:  60em;   // 960px
+$bp-xl:     75em;   // 1200px
+
+// Other
+// -----------------------------------------------------------------------------
+
 // Grid
 $grid-padding: 15px;
 

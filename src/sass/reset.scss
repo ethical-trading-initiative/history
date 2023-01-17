@@ -1,0 +1,60 @@
+// NOTE: LibSass-only feature: importing .css file directly into Sass.
+@import "../../node_modules/normalize.css/normalize";
+
+// Additional resets
+// -----------------------------------------------------------------------------
+
+// github.com/jonathantneal/sanitize.css
+// -----------------------------------------------------------------------------
+
+// Universal inheritance
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+// Remove margin and padding of all elements
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Specify default styles in the document
+:root {
+  box-sizing: border-box;
+}
+
+// http://stackoverflow.com/a/21248047/464066
+// -----------------------------------------------------------------------------
+
+// Disable foul iOS defaults
+textarea,
+//input[type="button"],
+input[type="email"],
+//input[type="submit"],
+input[type="text"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+// https://gist.github.com/larrybotha/7881691
+// -----------------------------------------------------------------------------
+
+// Target IE to respect aspect ratios & sizes for img tags containing SVG files
+// IE9
+.ie img[src*=".svg"] {
+  width: 100%;
+}
+// IE10+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%;
+  }
+}

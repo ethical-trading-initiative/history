@@ -1,0 +1,14 @@
+input::placeholder {
+  color: $c-grey-d2;
+}
+
+textarea {
+  min-height: $space*10;
+}
+
+fieldset {
+  @include default-border;
+  margin-left: 0;
+  margin-right: 0;
+  padding: $space;
+}

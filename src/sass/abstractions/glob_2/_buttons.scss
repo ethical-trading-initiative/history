@@ -1,0 +1,60 @@
+@mixin btn-colors($text, $bg, $h-text: $text, $h-bg: darken($bg, 10%)) {
+  &, &:active, &:visited {
+    color: $text;
+    background: $bg;
+  }
+  &:hover, &:focus {
+    color: $h-text;
+    background: $h-bg;
+  }
+}
+
+@mixin btn-base {
+  @include btn-colors($c-white, $c-grey-d2);
+  @include font-smoothing(on);
+  display: inline-block;
+  border-radius: $default-border-radius;
+  margin: 0;
+  padding: $space/2 $space*1.5;
+  border: none;
+  font-family: inherit;
+  line-height: 1.8;
+  text-align: center;
+  overflow: visible;
+  cursor: pointer;
+  transition: background .15s ease-out;
+  font-weight: bold;
+  &, &:hover, &:active,
+  &:focus, &:visited {
+    text-decoration: none;
+  }
+}
+
+// Style variants
+// Use in addition to btn-base
+// -----------------------------------------------------------------------------
+
+@mixin btn--primary {
+  @include btn-colors($c-brand-burnt-umber, $c-brand-bright-yellow);
+}
+
+@mixin btn--small {
+  font-size: rem-scale(-1);
+}
+
+@mixin btn--large {
+  font-size: rem-scale(1);
+  padding: $space $space*3;
+}
+
+// Fill width of container
+@mixin btn--expand {
+  display: block;
+}
+
+// Inherit sizing from parent
+@mixin btn--inherit {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+}

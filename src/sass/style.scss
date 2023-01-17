@@ -5,12 +5,9 @@
 @import "../../node_modules/bohea-sass-tools/sass/bohea-sass-tools";
 
 // Import various partials (some via gulp-sass-globbing - see gulpfile.js).
-@import "../../node_modules/@ethical-trading-initiative/base-sass/src/sass/variables/**/*.scss";
 @import "variables/**/*.scss";
-@import "../../node_modules/@ethical-trading-initiative/base-sass/src/sass/abstractions/glob_1/**/*.scss";
-@import "../../node_modules/@ethical-trading-initiative/base-sass/src/sass/abstractions/glob_2/**/*.scss";
-@import "abstractions/**/*.scss";
-@import "../../node_modules/@ethical-trading-initiative/base-sass/src/sass/base/**/*.scss";
+@import "abstractions/glob_1/**/*.scss";
+@import "abstractions/glob_2/**/*.scss";
 @import "base/**/*.scss";
 @import "components/**/*.scss";
 @import "dev";

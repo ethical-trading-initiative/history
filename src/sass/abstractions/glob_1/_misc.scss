@@ -1,0 +1,60 @@
+@mixin default-border($color:$c-grey-l2) {
+  border: $default-border-width $default-border-style $color;
+}
+
+@mixin padded-row($v-space:$space*2, $border-src-color:$c-grey-l1, $border-alpha:0.7) {
+  @include full;
+  @include default-border(rgba($border-src-color, $border-alpha));
+  border-width: 1px 0 0 0;
+  padding-top: $v-space;
+  margin-bottom: $v-space;
+}
+
+@mixin border-top-decor($color:$c-brand-sky-blue) {
+  border-top: $space/2 solid $color;
+}
+
+@mixin isolated {
+  background: $c-grey-l5;
+  padding: $space*2;
+}
+
+@mixin highlighted-block {
+  font-family: $f-secondary;
+  border: solid $c-brand-bright-yellow;
+  border-width: 0 0 0 5px;
+  background-color: lighten($c-brand-bright-yellow, 35%);
+  padding: rem-scale(2);
+  .field,
+  .field__item *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin view-bottom {
+  margin-top: $space*2;
+  border-top: $default-border;
+  padding-top: $space*2;
+  text-align: center;
+}
+
+// Anti-FOUT measures (WebFontLoader)
+// -----------------------------------------------------------------------------
+
+// Based on:
+// https://gist.github.com/jackw/6702593
+// http://help.typekit.com/customer/portal/articles/6852-controlling-the-flash-of-unstyled-text-or-fout-using-font-events
+
+// Overrides mixin of the same name in bohea-sass-tools
+
+@mixin webfont($font-stack) {
+  @if $font-stack == $f-secondary {
+    .wf-loading & {
+      visibility: hidden;
+    }
+    .wf-active {
+      visibility: visible;
+    }
+  }
+  font-family: $font-stack;
+}

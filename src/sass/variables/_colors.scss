@@ -1,1 +1,89 @@
+// By description
+// -----------------------------------------------------------------------------
+
+// Brand colours
+
+// Primary brand colours
+$c-brand-gold: #9F8B68;
+$c-brand-deep-red: #8B032C;
+$c-brand-bright-orange: #F7931E;
+// Supporting brand colours
+$c-brand-blue-teal: #4A6E93;
+$c-brand-bright-yellow: #FEC133;
+$c-brand-burgundy: #62003F;
+$c-brand-burnt-umber: #51201A;
+$c-brand-cool-grey: #7D8F90;
+$c-brand-cool-pink: #CE6294;
+$c-brand-dusty-pink: #B78898;
+$c-brand-forest-green: #505E2B;
+$c-brand-heather: #B0A3A6;
+$c-brand-mint-green: #00A087;
+$c-brand-mustard: #B18936;
+$c-brand-pale-green: #A3C690;
+$c-brand-pale-orange: #FCCEB3;
+$c-brand-pale-yellow: #EBD66E;
+$c-brand-plaster: #E3DAD4;
+$c-brand-powder-blue: #7A8DC4;
+$c-brand-purple: #555199;
+$c-brand-ruby: #EE3252;
+$c-brand-sky-blue: #72AFCA;
+$c-brand-slate-grey: #5A878B;
+$c-brand-stone: #6E524F;
+
+// Greys (lower numbers indicate darker shades)
+
+$c-grey-base-input: desaturate($c-brand-gold, 20);
+
+// Dark greys (would require light on dark)
+$c-grey-d1: darken($c-grey-base-input, 32);
+$c-grey-d2: darken($c-grey-base-input, 18);
+$c-grey-d3: lighten($c-grey-base-input, 0);
+$c-grey-d4: lighten($c-grey-base-input, 30);
+
+// Light greys (would require dark on light)
+$c-grey-l1: lighten($c-grey-base-input, 34);
+$c-grey-l2: lighten($c-grey-base-input, 37);
+$c-grey-l3: lighten($c-grey-base-input, 41);
+$c-grey-l4: lighten($c-grey-base-input, 42);
+$c-grey-l5: lighten($c-grey-base-input, 44);
+
+// Black & white
+$c-black: #000;
+$c-white: #fff;
+
+// Indicators
+$c-indicator-blue:    $c-brand-sky-blue;
+$c-indicator-green:   $c-brand-forest-green;
+$c-indicator-red:     $c-brand-ruby;
+$c-indicator-yellow:  $c-brand-bright-yellow;
+$c-indicator-orange:  $c-brand-bright-orange;
+
+// Services
+// Source: http://goo.gl/lt68J
+$c-social-facebook: #3b5998;
+$c-social-linkedin: #007bb5;
+$c-social-twitter:  #00aced;
+$c-social-youtube:  #bb0000;
+
+// By feature
+// -----------------------------------------------------------------------------
+
+// Feature colours
+$c-feature-1: $c-brand-deep-red;
+$c-feature-2: $c-brand-bright-orange;
+
+// Page
+$c-page-bg: $c-white;
+$c-footer-bg: $c-grey-d2;
+
+// Block
+$c-block-bg: $c-white;
+
+// Menus
+$c-menu-bg: $c-grey-d2;
+$c-menu-fg: white;
+
+// Other
+// -----------------------------------------------------------------------------
+
 $c-body-bg: $c-brand-plaster; // body background color

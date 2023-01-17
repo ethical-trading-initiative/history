@@ -1,0 +1,12 @@
+@mixin small-text {
+  font-size: rem-scale(-1);
+}
+
+@mixin reset-heading {
+  font-size: inherit;
+  line-height: inherit;
+  color: $c-grey-d1;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+}

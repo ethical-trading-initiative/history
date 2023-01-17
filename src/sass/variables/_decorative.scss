@@ -1,1 +1,15 @@
+// Borders
+// -----------------------------------------------------------------------------
+
+$default-border-radius: 3px;
+$default-border-width: 1px;
+$default-border-style: solid;
+// Lucky this var works (color var just happens to be loaded beforehand).
+// TODO: Move to _colors.scss
+$default-border-color: $c-grey-l3;
+$default-border: $default-border-width $default-border-style $default-border-color;
+
+// Other
+// -----------------------------------------------------------------------------
+
 $box-shadow--default: 0 5px 5px rgba(black, 0.2);

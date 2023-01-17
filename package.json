@@ -4,7 +4,6 @@
   "private": true,
   "author": "Dan Bohea",
   "devDependencies": {
-    "@ethical-trading-initiative/base-sass": "^1.1.1",
     "autoprefixer": "^6.4.1",
     "bohea-sass-tools": "^1.0.1",
     "bourbon": "^4.3.4",

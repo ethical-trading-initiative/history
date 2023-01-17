@@ -1,0 +1,14 @@
+img {
+  width: inherit; // Make images fill their parent's space. Solves IE8.
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+figure {
+  margin: 0 0 rem-scale(0) 0;
+  figcaption {
+    @include small-text;
+    padding: $space;
+  }
+}

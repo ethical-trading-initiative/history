@@ -1,0 +1,5 @@
+// TODO: add args support
+@mixin framed-element {
+  background-color: $c-grey-l5;
+  padding: $space/2;
+}

@@ -1,11 +1,122 @@
-// TODO: Move to base styles
+html {
+  font-size: 100%;
+}
+
+body {
+  @include webfont($f-primary);
+  font-size: rem-scale(0);
+  color: $c-grey-d1;
+  line-height: 1.8;
+}
+
+// Links
+// -----------------------------------------------------------------------------
+
+a {
+  @include link-colors($c-feature-1, $c-grey-d2);
+}
+
+// Headings
+// -----------------------------------------------------------------------------
+
+h1, .faux-h1 {
+  @include h1;
+}
+
+h2, .faux-h2 {
+  @include h2;
+}
+
+h3, .faux-h3 {
+  @include h3;
+}
+
+h4, h5, h6, .faux-h4 {
+  @include h4;
+}
+
+// Paragraphs
+// -----------------------------------------------------------------------------
+
+p {
+  margin: 0 0 rem-scale(0) 0;
+}
+p + img {
+  float: left;
+  margin-right: $space;
+}
+
+// Quotes
+// -----------------------------------------------------------------------------
+
+blockquote {
+  margin: rem-scale(3) 0;
+  padding: 0 $space*1.5;
+  border-left: 0.5em solid $c-grey-l2;
+  font-style: italic;
+  color: $c-grey-d2;
+  p:last-child {
+    margin-bottom: 0;
+  }
+  cite {
+    @include small-text;
+    display: block;
+    margin-top: $space;
+    font-style: normal;
+    color: $c-grey-d1;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+// Monospace
+// -----------------------------------------------------------------------------
+
+code, kbd, pre, samp {
+  @include webfont($f-mono);
+}
+
+// Marks
+// -----------------------------------------------------------------------------
+
+mark, .marker {
+  @include small-text;
+  border-radius: 10px;
+  padding: 0.1em 0.8em;
+  background: $c-feature-2;
+  color: $c-white;
+  text-transform: capitalize;
+}
+
+// Misc
+// -----------------------------------------------------------------------------
+
+small, .small-text {
+  @include small-text;
+}
+
+hr {
+  background-color: $c-grey-l2;
+  height: 1px;
+  border: none;
+  margin: $space*4 auto;
+}
+
+address {
+  font-style: normal;
+}
+
+// Other
+// -----------------------------------------------------------------------------
+
 blockquote,
 li,
 p {
   widows: 3;
   orphans: 3;
 }
-// /TODO
 
 blockquote {
   font-size: rem-scale(1);
