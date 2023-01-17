@@ -1,6 +1,8 @@
 // Font stacks
 // -----------------------------------------------------------------------------
 
-$f-primary: 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-secondary: 'adelle', $f-primary;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$f-primary: 'Poppins', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$f-secondary: $f-primary;
 $f-mono: "Andale Mono", AndaleMono, monospace, serif;
