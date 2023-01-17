@@ -1,7 +1,7 @@
 // By description
 // -----------------------------------------------------------------------------
 
-// Brand colours
+// Legacy Brand colours
 
 // Primary brand colours
 $c-brand-gold: #9F8B68;
@@ -30,9 +30,63 @@ $c-brand-sky-blue: #72AFCA;
 $c-brand-slate-grey: #5A878B;
 $c-brand-stone: #6E524F;
 
+// New brand colours
+
+$c-brand-blue-light: #9ADBE8;
+$c-brand-blue-dark: #003A66;
+$c-brand-blue: #00AEEF;
+$c-brand-green-dark: #10322B;
+$c-brand-green-light: #CDEA80;
+$c-brand-grey-eti: #515151;
+$c-brand-grey-light: #D9D9D9;
+$c-brand-orange-eti-light: #F5CABF;
+$c-brand-orange-eti: #F4633A;
+$c-brand-purple-dark: #53274E;
+$c-brand-purple-eti: #722257;
+$c-brand-purple-light: #D6BFDD;
+$c-brand-red-dark: #671F20;
+$c-brand-red-light: #FCAFC0;
+$c-brand-red: #F4364C;
+$c-brand-teal-light: #9CDBD9;
+$c-brand-teal: #12B2A6;
+$c-brand-yellow-dark: #886B25;
+$c-brand-yellow-light: #F8E08E;
+$c-brand-yellow: #FFB81C;
+
+// Map new colours to legacy colours.
+
+// Primary brand colours
+$c-brand-gold: $c-brand-yellow-dark;
+$c-brand-deep-red: $c-brand-red-dark;
+$c-brand-bright-orange: $c-brand-orange-eti;
+// Supporting brand colours
+$c-brand-blue-teal: $c-brand-blue-dark;
+$c-brand-bright-yellow: $c-brand-yellow;
+$c-brand-burgundy: $c-brand-purple-eti;
+$c-brand-burnt-umber: $c-brand-red-dark;
+$c-brand-cool-grey: $c-brand-grey-eti;
+$c-brand-cool-pink: $c-brand-red-light;
+$c-brand-dusty-pink: $c-brand-purple-light;
+$c-brand-forest-green: $c-brand-green-dark;
+$c-brand-heather: $c-brand-purple-light;
+$c-brand-mint-green: $c-brand-teal;
+$c-brand-mustard: $c-brand-yellow-dark;
+$c-brand-pale-green: $c-brand-green-light;
+$c-brand-pale-orange: $c-brand-orange-eti-light;
+$c-brand-pale-yellow: $c-brand-yellow-light;
+$c-brand-plaster: $c-brand-grey-light;
+$c-brand-powder-blue: $c-brand-blue;
+$c-brand-purple: $c-brand-blue;
+$c-brand-ruby: $c-brand-red;
+$c-brand-sky-blue: $c-brand-blue-light;
+$c-brand-slate-grey: $c-brand-teal-light;
+$c-brand-stone: $c-brand-purple-dark;
+
 // Greys (lower numbers indicate darker shades)
 
-$c-grey-base-input: desaturate($c-brand-gold, 20);
+//$c-grey-base-input: desaturate($c-brand-gold, 20);
+// Uses legacy gold colour directly.
+$c-grey-base-input: desaturate(#9F8B68, 20);
 
 // Dark greys (would require light on dark)
 $c-grey-d1: darken($c-grey-base-input, 32);
