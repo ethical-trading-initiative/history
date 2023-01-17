@@ -8,7 +8,7 @@
     "bohea-sass-tools": "^1.0.1",
     "bourbon": "^4.3.4",
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.27.10",
     "cookieconsent": "^3.0.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
