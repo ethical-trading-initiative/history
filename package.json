@@ -18,7 +18,7 @@
     "gulp-gzip": "^1.4.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-main-bower-files": "^1.8.0",
-    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-modernizr": "^4.0.3",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^6.2.0",
     "gulp-real-favicon": "^0.3.2",
