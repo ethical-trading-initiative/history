@@ -20,5 +20,5 @@ Invalidate Cloudfront cache to see changes immediately.
 3. Select the Invalidations tab.
 4. Select Create Invalidation.
 5. Enter `/*` as the path.
-6. CLick "Create Invalidation".
+6. Click "Create Invalidation".
 7. Wait for the status to change to "Completed".
